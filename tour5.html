@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>The Sound of Music</title>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+		$(document).ready(function(){
+			
+			$(".menu").on("mouseenter click", function(){
+				$(this).css("font-size","17pt");
+			 $("header>div>nav").fadeIn();
+			});
+			
+			$("header>div>nav").mouseleave(function(){
+				$(".menu").css("font-size","15pt");
+				$("header>div>nav").fadeOut();
+			});
+			
+			
+			
+			});
+		</script>
+		<style>
+		* {margin:0; padding:0; box-sizing:border-box;}
+		html, body{font:12pt/120% "나눔바른고딕", sans-serif; color:white; line-height:21pt;  }
+		img{max-width:100%;}
+		a{text-decoration:none; color:white;}
+		
+		#layout	{width:1300px; height:790px; margin:auto; position:relative; background-image:url("images/background.jpg");}
+		header>div	{display:flex; padding-top:5px; height:40px;}
+		header>div>h2	{flex:0.1; margin-right:10px;  margin-top:4px; }
+		.menu:hover {transform:scale(1.5);}
+		.menu{font-family:"Times new Roman"; color:#666464; font-size:15pt; padding-left:10px;}
+		
+		header>div>nav{ flex:0.6;  font-style:italic; background:rgba(255,255,255,0.3);  border-top-right-radius:15px;  margin-top:4px; display:none; padding:4px 6px;}
+		header nav>div{display:flex; justify-content:space-around;align-items:center;}
+		header nav a{font-family:"Times new Roman"; font-size:13pt;  padding-right:10px; /*border:1px solid red;*/ letter-spacing:0.05em;}
+				
+		
+		header>div>h3{flex:1; text-align:right; margin-right:10px; margin-top:4px;}
+		header>div>h3 a{font-family:"Times new Roman"; color:#666464; font-size:15pt; padding-left:10px;}
+		header>img{display:inline-block; padding:20px 45px 0 50px; }
+		
+		main	{display:flex; padding:40px 30px;}
+		#tourpic {flex:0.8; padding:30px; background:rgba(255,255,255,0.5); margin:0 40px 0 15px; }
+		#tourpic img:first-child {margin-bottom:20px;}
+		#tourpic img{transition:0.5s;}
+		#tourpic img:hover{transform:scale(1.5) translateX(61px); border:8px solid white; box-shadow:2px 2px 4px rgba(0,0,0,0.7);}
+		
+		main section{flex:1; padding-right:50px;}
+		section h3{font-size:16pt;}
+		section>a:hover{text-decoration:underline;}
+		
+		iframe{position:absolute; top:520px; left:980px; box-shadow:2px 2px 4px rgba(0,0,0,0.5);}
+		
+		.left{border:none; background:none; position:absolute; left:15px; top:46%;}
+		.right{border:none; background:none; position:absolute; right:15px; top:46%; z-index:1;}
+		</style>
+		
+		
+	</head>
+	<body>
+		<div id="layout">
+			<header>
+				<div>
+					<h2><i><a href="menu.html" class="menu">Menu</a></i></h2>
+					<nav>
+						<div>
+						<a href="about.html">About</a>
+						<a href="ost.html">Ost</a>
+						<a href="background.html">Background</a>
+						<a href="tour.html">Tour</a>
+						<a href="contents.html">Contents</a>
+						</div>
+					</nav>
+					<h3><i><a href="index.html">Home</a></i></h3>
+				</div>
+				<img src="images/tour_title2.png" alt="영화 촬영지 투어 타이틀"><br>
+			</header>
+			<main>
+				<div id="tourpic">
+					<img src="images/trip6-1.jpg" alt="영화 레오폴드스크론"><br>
+					<img src="images/trip6-2.jpg" alt="레오폴드스크론"><br>
+				</div>
+				<section>
+				<h3>몬드제 성당 Mondsee Basilica Minor St. Michael </h3><br>
+				<p>
+				주소: Josef-Bunk-Straße 6, 5310 Mondsee,  Austria.<br>
+				입장료: 무료<br><br>
+
+				자신의 마음을 깨닫고 약혼녀와 파혼 후 마리아와 결혼을 하는데, 대령과 마리아의 결혼식이 촬영된 곳 입니다.<br><br>
+
+				'성미카엘 대성당(St. Michael Cathedral)'이라고도 합니다. 748년 로마인 주거유적지에 세워졌으며 몇백 년간 잘츠카머구트(Salzkammergut) 지방의 문화에 중요한 영향을 미쳤습니다. 원래 이곳에 있던 수도원은 1792년 없어졌습니다. <br>
+
+				가장 오래된 독일어 성경 번역본인 〈몬드제 마태(Mondsee Matthew)〉의 작업이 이곳에서 이루어졌습니다.<br>
+
+				</p><br>
+				<a href="https://www.dioezese-linz.at/mondsee" target="_blank"><i>https://www.dioezese-linz.at/mondsee</i></a>
+				</section>
+				
+			</main>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2677.1478558713006!2d13.349030315827308!3d47.856099678701916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4776a4017c4f6125%3A0x441e7a7fa8645bd1!2sBasilika%20St.%20Michael!5e0!3m2!1sko!2skr!4v1669105009355!5m2!1sko!2skr"  width="250" height="250" style="border-radius:10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					
+			
+			<button type="button" class="left"><a href="tour4.html"><img src="images/left.png" alt="왼쪽버튼"></a></button>		
+			<button type="button" class="right"><a href="tour6.html"><img src="images/right.png" alt="오른쪽버튼"></a></button>
+		</div>
+	</body>
+
+</html>

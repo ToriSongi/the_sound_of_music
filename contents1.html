@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>The Sound of Music</title>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+		$(document).ready(function(){
+			
+			$(".menu").on("mouseenter click", function(){
+				$(this).css("font-size","17pt");
+			 $("header>div>nav").fadeIn();
+			});
+			
+			$("header>div>nav").mouseleave(function(){
+				$(".menu").css("font-size","15pt");
+				$("header>div>nav").fadeOut();
+			});
+			
+			
+			
+			
+			
+			$("#gallery img").click(function(){
+				const t1 = $(this).index();
+				$("#popup>div").eq(t1).fadeIn();
+			});			
+				
+			$("#showup button").click(function(){
+					$("#popup>div").fadeOut();
+				});
+				
+				
+				
+			});///
+		</script>
+		<style>
+		* {margin:0; padding:0; box-sizing:border-box;}
+		html, body{font:16pt/120% "나눔바른고딕", sans-serif; color:white;  }
+		img{max-width:100%;}
+		a{text-decoration:none; color:white;}
+		
+		#layout	{width:1300px; height:790px; margin:auto; position:relative; background-image:url("images/background.jpg");}
+		header>div	{display:flex; padding-top:5px; height:40px;}
+		header>div>h2	{flex:0.1; margin-right:10px;  margin-top:4px; }
+		.menu:hover {transform:scale(1.5);}
+		.menu{font-family:"Times new Roman"; color:#666464; font-size:15pt; padding-left:10px;}
+		
+		header>div>nav{ flex:0.6;  font-style:italic; background:rgba(255,255,255,0.3);  border-top-right-radius:15px;  margin-top:4px; display:none; padding:4px 6px;}
+		header nav>div{display:flex; justify-content:space-around;align-items:center;}
+		header nav a{font-family:"Times new Roman"; font-size:13pt;  padding-right:10px; letter-spacing:0.05em;}
+				
+		
+		header>div>h3{flex:1; text-align:right; margin-right:10px; margin-top:4px;}
+		header>div>h3 a{font-family:"Times new Roman"; color:#666464; font-size:15pt; padding-left:10px;}
+		header>img{display:inline-block; padding:20px 45px 0 50px; }
+		
+		main	{ padding:40px 60px; }
+		#gallery{background:rgba(255,255,255,0.4); padding:10px 20px;}
+		#gallery>h3{font-size:15pt; padding:12px 20px;}
+		#gallery>p{font-size:12pt;font-family:"Times new Roman"; color:#666464; padding-right:25px; text-align:right; letter-spacing:0.05em;}
+		#gallery>div{display:flex; justify-content:space-between; flex-wrap:wrap; padding:15px 0 0 5px;}
+		#gallery>div img{margin:10px 10px; width:200px; height:200px;}
+		
+		#popup{}
+		#popup>h4 {display:none;}
+		#showup{padding:150px 240px; top:0; background:rgba(0,0,0,0.9);  position:absolute;left:0; z-index:1; width:100%;height:100vh; display:none; }
+		
+		#showup>div>img {position:absolute; top:80px; border:7px solid white;}
+		#showup button{border:none; background:none; font-size:1.5rem; float:right; color:white;}
+	
+		
+		.left{border:none; background:none; position:absolute; left:15px; top:46%;}
+		
+		</style>
+		
+		
+	</head>
+	<body>
+		<div id="layout">
+			<header>
+				<div>
+					<h2><i><a href="menu.html" class="menu">Menu</a></i></h2>
+					<nav>
+						<div>
+							<a href="about.html">About</a>
+							<a href="ost.html">Ost</a>
+							<a href="background.html">Background</a>
+							<a href="tour.html">Tour</a>
+							<a href="contents.html">Contents</a>
+						</div>
+					</nav>
+					<h3><i><a href="index.html">Home</a></i></h3>
+				</div>
+				<img src="images/contents_title1.png" alt="영화 관련 컨텐츠 타이틀1"><br>
+			</header>
+			<main>
+				<section id="gallery">
+					<h3>영화 스틸컷 갤러리</h3>
+					<p> --- Click on the pic. ---------------------------------------------------------------------------------------------------------   The Sound of Music Movie stillcut gallery</p>
+					<div>
+						<img src="images/gallery1_small.jpg" alt="마리아수녀 작은사진">
+						<img src="images/gallery2_small.jpg" alt="마리아기타 작은사진">
+						<img src="images/gallery3_small.jpg" alt="마리아방 작은사진">
+						<img src="images/gallery4_small.jpg" alt="아이들산책 작은사진">
+						<img src="images/gallery5_small.jpg" alt="폰트랩가족 작은사진">
+						<img src="images/gallery6_small.jpg" alt="마리아와 폰트랩 작은사진">
+						<img src="images/gallery7_small.jpg" alt="에델바이스 작은사진">
+						<img src="images/gallery8_small.jpg" alt="마리아와 폰트랩 왈츠 작은사진">
+						<img src="images/gallery9_small.jpg" alt="가족합창 작은사진">
+						<img src="images/gallery10_small.jpg" alt="마폰트랩저택 작은사진">
+					</div>
+				</section>	
+				<section id="popup">
+					<h4>큰이미지</h4>
+					<div id="showup">
+						<button type="button">X</button>				
+						<img src="images/gallery1.jpg" alt="마리아 수녀">			
+					</div>	
+					<div id="showup">
+						<button type="button">X</button>				
+						 <img src="images/gallery2.jpg" alt="마리아 기타">				
+					</div>	
+					<div id="showup">
+						<button type="button">X</button>				
+						 <img src="images/gallery3.jpg" alt="마리아방">			
+					</div>	
+					<div id="showup">
+						<button type="button">X</button>				
+						 <img src="images/gallery4.jpg" alt="아이들산책">				
+					</div>	
+					<div id="showup">
+						<button type="button">X</button>				
+						<img src="images/gallery5.jpg" alt="폰트랩가족">			
+					</div>	
+					<div id="showup">
+						<button type="button">X</button>				
+						<img src="images/gallery6.jpg" alt="마리아와 폰트랩">			
+					</div>	
+					<div id="showup">
+						<button type="button">X</button>				
+						<img src="images/gallery7.jpg" alt="에델바이스">			
+					</div>
+					<div id="showup">
+						<button type="button">X</button>				
+						<img src="images/gallery8.jpg" alt="마리아와 폰트랩 왈츠">			
+					</div>
+					<div id="showup">
+						<button type="button">X</button>				
+						<img src="images/gallery9.jpg" alt="가족합창">			
+					</div>
+					<div id="showup">
+						<button type="button">X</button>				
+						<img src="images/gallery10.jpg" alt="폰트랩저택"> 		
+					</div>
+						
+						<!-- <img src="images/gallery2.jpg" alt="마리아 기타">		
+						<img src="images/gallery3.jpg" alt="마리아방">
+						<img src="images/gallery4.jpg" alt="아이들산책">
+						<img src="images/gallery5.jpg" alt="폰트랩가족">
+						<img src="images/gallery6.jpg" alt="마리아와 폰트랩">
+						<img src="images/gallery7.jpg" alt="에델바이스">
+						<img src="images/gallery8.jpg" alt="마리아와 폰트랩 왈츠">
+						<img src="images/gallery9.jpg" alt="가족합창">
+						<img src="images/gallery10.jpg" alt="폰트랩저택"> 
+					</div> -->
+					
+				</section>
+			</main>	
+			
+			<button type="button" class="left"><a href="contents.html"><img src="images/left.png" alt="왼쪽버튼"></a></button>	
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>The Sound of Music</title>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+		$(document).ready(function(){
+			
+			$(".menu").on("mouseenter click", function(){
+				$(this).css("font-size","17pt");
+			 $("header>div>nav").fadeIn();
+			});
+			
+			$("header>div>nav").mouseleave(function(){
+				$(".menu").css("font-size","15pt");
+				$("header>div>nav").fadeOut();
+			});
+			
+			
+			
+			});
+		</script>
+		<style>
+		* {margin:0; padding:0; box-sizing:border-box;}
+		html, body{font:15pt/120% "나눔바른고딕", sans-serif; color:white;  /*letter-spacing:0.1em;*/ }
+		img{max-width:100%;}
+		a{text-decoration:none; color:white;}
+		
+		#layout	{width:1300px; height:790px; margin:auto; position:relative; background-image:url("images/background.jpg");}
+		
+		
+		header>div	{display:flex; padding-top:5px; height:40px;}
+		header>div>h2	{flex:0.1; margin-right:10px;  margin-top:4px; }
+		.menu:hover {transform:scale(1.5);}
+		.menu{font-family:"Times new Roman"; color:#666464; font-size:15pt; padding-left:10px;}
+		
+		header>div>nav{ flex:0.6;  font-style:italic; background:rgba(255,255,255,0.3);  border-top-right-radius:15px;  margin-top:4px; display:none; padding:4px 6px;}
+		header nav>div{display:flex; justify-content:space-around;align-items:center;}
+		header nav a{font-family:"Times new Roman"; font-size:13pt;  padding-right:10px; /*border:1px solid red;*/ letter-spacing:0.05em;}
+				
+		
+		header>div>h3{flex:1; text-align:right; margin-right:10px; margin-top:4px;} 
+		header>div>h3 a{font-family:"Times new Roman"; color:#666464; font-size:15pt; padding-left:10px;}
+		
+		header>img{display:inline-block; padding:20px 45px 0 50px; }
+		header>img:last-child {margin-left:30px;}
+		
+		main	{padding:20px 30px;}
+	
+		#info{position:absolute; z-index:1;}
+		section{padding:20px; line-height:20pt; }
+		section>h3{padding-bottom:10px; padding-left:10px;font-weight:normal;}
+		section>p{font-size:12pt;}
+		#director>img {float:left; margin-right:20px;}
+		#director>p>b(:first-of-type) {font-size:20pt; }
+		#movie {width:630px; height:331px; transform:translate(590px,200px); }
+		
+		button{border:none; background:none; position:absolute; right:15px; top:46%;}
+		
+		</style>
+		
+		
+	</head>
+	<body>
+		<div id="layout">
+			<header>
+				<div>
+					<h2><i><a href="menu.html" class="menu">Menu</a></i></h2>
+					<nav>
+						<div>
+						<a href="about.html">About</a>
+						<a href="ost.html">Ost</a>
+						<a href="background.html">Background</a>
+						<a href="tour.html">Tour</a>
+						<a href="contents.html">Contents</a>
+						</div>
+					</nav>
+					<h3><i><a href="index.html">Home</a></i></h3>
+				</div>
+				<img src="images/about_title1.png" alt="영화소개"><br>
+				<img src="images/about_h1.png" alt="사운드오브뮤직">
+			</header>
+			<main>
+				<div id="info">
+					<section>
+						<h3>기획의도</h3>
+						<p>요즘 그래픽의 발달로 CG가 가미된 화려한 블럭버스터 영화와 많은 영화효과로 제작된 대작이 넘쳐나고 있습니다.<br>
+						하지만 이 영화는 그런 기술이 많이 들어간 영화는 아니지만, 그림같은 알프스의 배경과 아름다운 하모니와 멜로디를 감상할 수 있는 뮤지컬 영화의 고전 중 하나 입니다.<br>
+						오래된 영화라 화면이 낡고 선명하진 않지만 최신 멋진 영화 속에 이 같은 정서와 따뜻함을 느끼게 한 영화가 있을까 하는 의미로 다시 들여다 보며 그 감성을 다시 느끼고자 시작 하였습니다.
+						</p>
+					</section>
+					<section>
+						<h3>줄거리</h3>
+						<p>음악을 사랑하는 말괄량이 견습수녀 ‘마리아’는 원장수녀의 권유로 해군명문 집안 폰트랩가의 가정교사가 된다.<br>
+						‘마리아’는 좀처럼 엄마를 잃고 마음의 문을 열지 않는 폰트랩 가의 일곱 아이들에게 노래를 가르치며 점차 교감하며 가까워지게 되고, 엄격한 ‘폰트랩 대령’ 역시 마음의 문을 열게 된다.<br>
+						그러던 어느날, ‘마리아’는 자신이 ‘폰트랩 대령’을 사랑하고 있다는 사실을 깨닫게 되고, 자신만의 비밀을 간직한 채 아이들의 곁을 떠나 다시 수녀원에 들어가기로 결심 하는데...
+						</p>
+					</section>
+					<section id="director">
+						<h3>감독</h3>
+						<img src="images/about_director.jpg" alt="로버트 와이즈">
+						<p><b>로버트 와이즈 RobertWise</b><br><br>
+							<b>다른 작품</b><br>
+							발 류튼: 그림자 속의 사나이 Val Lewton: The Man In The Shadows, 2007<br>
+							스톰 인 썸머 A Storm In Summer, 2000
+						</p>
+					</section>
+				</div>
+				<div id="movie"><img src="images/about_movie.png" alt="수녀원장면"></div>
+				
+			</main>
+		
+				<button type="button"><a href="about1.html"><img src="images/right.png" alt="오른쪽버튼"></a></button>
+			
+	
+		</div>
+	</body>
+
+</html>

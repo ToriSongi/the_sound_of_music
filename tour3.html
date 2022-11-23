@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>The Sound of Music</title>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+		$(document).ready(function(){
+			
+			$(".menu").on("mouseenter click", function(){
+				$(this).css("font-size","17pt");
+			 $("header>div>nav").fadeIn();
+			});
+			
+			$("header>div>nav").mouseleave(function(){
+				$(".menu").css("font-size","15pt");
+				$("header>div>nav").fadeOut();
+			});
+			
+			
+			
+			});
+		</script>
+		<style>
+		* {margin:0; padding:0; box-sizing:border-box;}
+		html, body{font:12pt/120% "나눔바른고딕", sans-serif; color:white; line-height:21pt;  }
+		img{max-width:100%;}
+		a{text-decoration:none; color:white;}
+		
+		#layout	{width:1300px; height:790px; margin:auto; position:relative; background-image:url("images/background.jpg");}
+		header>div	{display:flex; padding-top:5px; height:40px;}
+		header>div>h2	{flex:0.1; margin-right:10px;  margin-top:4px; }
+		.menu:hover {transform:scale(1.5);}
+		.menu{font-family:"Times new Roman"; color:#666464; font-size:15pt; padding-left:10px;}
+		
+		header>div>nav{ flex:0.6;  font-style:italic; background:rgba(255,255,255,0.3);  border-top-right-radius:15px;  margin-top:4px; display:none; padding:4px 6px;}
+		header nav>div{display:flex; justify-content:space-around;align-items:center;}
+		header nav a{font-family:"Times new Roman"; font-size:13pt;  padding-right:10px; /*border:1px solid red;*/ letter-spacing:0.05em;}
+				
+		
+		header>div>h3{flex:1; text-align:right; margin-right:10px; margin-top:4px;}
+		header>div>h3 a{font-family:"Times new Roman"; color:#666464; font-size:15pt; padding-left:10px;}
+		header>img{display:inline-block; padding:20px 45px 0 50px; }
+		
+		main	{display:flex; padding:40px 30px;}
+		#tourpic {flex:0.8; padding:30px; background:rgba(255,255,255,0.5); margin:0 40px 0 15px; }
+		#tourpic img:first-child {margin-bottom:20px;}
+		#tourpic img{transition:0.5s;}
+		#tourpic img:hover{transform:scale(1.5) translateX(61px); border:8px solid white; box-shadow:2px 2px 4px rgba(0,0,0,0.7);}
+		
+		main section{flex:1; padding-right:50px;}
+		section h3{font-size:16pt;}
+		section>a:hover{text-decoration:underline;}
+		
+		iframe{position:absolute; top:520px; left:980px; box-shadow:2px 2px 4px rgba(0,0,0,0.5);}
+		
+		.left{border:none; background:none; position:absolute; left:15px; top:46%;}
+		.right{border:none; background:none; position:absolute; right:15px; top:46%; z-index:1;}
+		</style>
+		
+		
+	</head>
+	<body>
+		<div id="layout">
+			<header>
+				<div>
+					<h2><i><a href="menu.html" class="menu">Menu</a></i></h2>
+					<nav>
+						<div>
+						<a href="about.html">About</a>
+						<a href="ost.html">Ost</a>
+						<a href="background.html">Background</a>
+						<a href="tour.html">Tour</a>
+						<a href="contents.html">Contents</a>
+						</div>
+					</nav>
+					<h3><i><a href="index.html">Home</a></i></h3>
+				</div>
+				<img src="images/tour_title2.png" alt="영화 촬영지 투어 타이틀"><br>
+			</header>
+			<main>
+				<div id="tourpic">
+					<img src="images/trip4-1.jpg" alt="영화 레오폴드스크론"><br>
+					<img src="images/trip4-2.jpg" alt="레오폴드스크론"><br>
+				</div>
+				<section>
+				<h3>논베르크 수녀원 Stift Nonnberg  </h3><br>
+				<p>
+				주소: Nonnberggasse 2, 5020 Salzburg, Austria.<br><br>
+				말썽꾸러기 견습 수녀인 마리아가 폰트랩 대령의 집으로 가정교사로 들어가기 전 지내던 수녀원입니다.<br>
+				나치에게 쫓기는 도중 수녀님들이 마리아와 대령의 가족들을 숨겨주는 곳이기도 합니다.<br><br>
+
+
+				1009년에 축성된 수녀원 교회로 지하실과 12세기 프레스코화가 있으며, 로마 카톨릭 의식이 거행됩니다.<br>
+
+				</p><br>
+				<a href="http://www.benediktinerinnen.de/" target="_blank"><i>http://www.benediktinerinnen.de/</i></a>
+				</section>
+				
+			</main>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2680.24379421839!2d13.048640615825786!3d47.796109682860205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4776908ba0ddf301%3A0x2031bfb58ba489f!2sStift%20Nonnberg!5e0!3m2!1sko!2skr!4v1669103892059!5m2!1sko!2skr"  width="250" height="250" style="border-radius:10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+								
+			
+			<button type="button" class="left"><a href="tour2.html"><img src="images/left.png" alt="왼쪽버튼"></a></button>		
+			<button type="button" class="right"><a href="tour4.html"><img src="images/right.png" alt="오른쪽버튼"></a></button>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>The Sound of Music</title>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+		$(document).ready(function(){
+			
+			$(".menu").on("mouseenter click", function(){
+				$(this).css("font-size","17pt");
+			 $("header>div>nav").fadeIn();
+			});
+			
+			$("header>div>nav").mouseleave(function(){
+				$(".menu").css("font-size","15pt");
+				$("header>div>nav").fadeOut();
+			});
+			
+			
+			
+			});
+		</script>
+		<style>
+		* {margin:0; padding:0; box-sizing:border-box;}
+		html, body{font:16pt/120% "나눔바른고딕", sans-serif; color:white; }
+		img{max-width:100%;}
+		a{text-decoration:none; color:white;}
+		
+	
+		#layout	{width:1300px; height:790px; margin:auto; position:relative; background-image:url("images/background.jpg"); position:relative;}
+		header>div	{display:flex; padding-top:5px; height:40px;}
+		header>div>h2	{flex:0.1; margin-right:10px;  margin-top:4px; }
+		.menu:hover {transform:scale(1.5);}
+		.menu{font-family:"Times new Roman"; color:#666464; font-size:15pt; padding-left:10px;}
+		
+		header>div>nav{ flex:0.6;  font-style:italic; background:rgba(255,255,255,0.3);  border-top-right-radius:15px;  margin-top:4px; display:none; padding:4px 6px;}
+		header nav>div{display:flex; justify-content:space-around;align-items:center;}
+		header nav a{font-family:"Times new Roman"; font-size:13pt;  padding-right:10px; /*border:1px solid red;*/ letter-spacing:0.05em;}
+				
+		
+		header>div>h3{flex:1; text-align:right; margin-right:10px; margin-top:4px;}
+		header>div>h3 a{font-family:"Times new Roman"; color:#666464; font-size:15pt; padding-left:10px;}
+		header>img{display:inline-block; padding:20px 45px 0 50px; }
+		
+		main	{display:flex; padding:40px 90px;}
+	
+		section h2{display:none;}
+		
+		figcaption {font-size:10pt; text-align:center; line-height:12pt; font-family:"Times New Roman"; letter-spacing:0.02em;}
+		
+		
+		aside{position:absolute; top:65px; left:540px; font-size:11pt;  font-family:"Times New Roman"; font-weight:bold; line-height:21pt; z-index:1; letter-spacing:0.02em;}
+		#movie {width:630px; height:331px; transform:translate(640px,-310px); }
+		</style>
+		
+		
+	</head>
+	<body>
+		<div id="layout">
+			<header>
+				<div>
+					<h2><i><a href="menu.html" class="menu">Menu</a></i></h2>
+					<nav>
+						<div>
+						<a href="about.html">About</a>
+						<a href="ost.html">Ost</a>
+						<a href="background.html">Background</a>
+						<a href="tour.html">Tour</a>
+						<a href="contents.html">Contents</a>
+						</div>
+					</nav>
+					<h3><i><a href="index.html">Home</a></i></h3>
+				</div>
+				<img src="images/ost_title.png" alt="영화음악타이틀"><br>
+			</header>
+			<main>
+				<div>
+					<figure><img src="images/ost_cover.jpg" alt="음반커버이미지">
+					<figcaption>The Sound Of Music (45th Anniversary Edition)<br>Original Motion Picture Soundtrack</figcaption><br>	
+					<img src="images/ost_player.jpg" alt="영화음악타이틀"><br>
+					<iframe width="329" height="40" src="https://www.youtube.com/embed/F4ZLaK0Q63I" title="'Do Re Mi' - "Sonrisas y Lágrimas"" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					
+					</figure>
+				</div>
+				
+			</main>
+			<aside>
+			
+				1. Prelude / The Sound Of Music<br>
+				2. Original Motion Picture Sound track<br>
+				3. Morning Hymn / Alleluia<br>
+				4. Maria<br>
+				5. I Have Confidence<br>
+				6. Sixteen Going On Seventeen<br>
+				7. My Favorite Things<br>
+				8. Do-Re-Mi(From The 20th Century-Fox Film'The Sound Of Music')<br>
+				9. The Sound Of Music<br>
+				10. The Lonely Goat herd<br>
+				11. Edelweiss<br>
+				12. Laendler<br>
+				13. So Long, Farewell<br>
+				14. En tr'acte<br>
+				15. Climb Ev'ry Mountain<br>
+				16. My Favorite Things(Reprise)<br>
+				17. Something Good<br>
+				18. Processional And Maria<br>
+				19. Sixteen Going On Seventeen(Reprise)<br>
+				20. Do-Re-Mi(Reprise)<br>
+				21. Edelweiss(Reprise)<br>
+				22. So Long, Farewell(Reprise)<br>
+				23. Climb Ev'ry Mountain(Reprise)<br>
+				24. Finale<br>
+				25. My Favorite Thing<br>
+			
+	
+			</aside>
+					<div id="movie"><img src="images/ost_movie.png" alt="아이들자전거"></div>
+			
+		</div>
+	</body>
+
+</html>

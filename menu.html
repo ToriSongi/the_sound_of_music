@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>The Sound of Music</title>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+		$(document).ready(function(){
+			$("#slide section").addClass("down");
+			
+			/*$("#slide section").eq(1).css("top",0).delay(100);    //.animate({marginLeft:0})
+			$("#slide section").eq(2).css("top",0).delay(200);
+			$("#slide section").eq(3).css("top",0).delay(300);
+			$("#slide section").eq(4).css("top",0).delay(400);*/
+			
+			
+			});
+		</script>
+		<style>
+		* {margin:0; padding:0; box-sizing:border-box;}
+		html, body{font:16pt/120% "나눔바른고딕", sans-serif;  }
+		img{max-width:100%;}
+		a{text-decoration:none; color:white;}
+		
+		#layout	{width:1300px; height:790px; margin:auto; position:relative; background-image:url("images/background.jpg");}
+		header	{display:flex; padding-top:10px;}
+		header>h1{flex:1;}
+		header>h1 a{font-family:"Times new Roman"; color:#666464; font-size:15pt; padding-left:10px;}
+		header>h2{flex:1; text-align:right; margin-right:10px;}
+		header>h2 a{font-family:"Times new Roman"; color:#666464; font-size:15pt; padding-left:10px;}
+		header>a{display:inline-block; padding:20px 45px 0 10px; }
+		
+		main	{ padding:40px 30px;  /*border:1px solid red;*/ position:relative;}
+		
+		#slide {position:relative; }
+		
+		section    {position:absolute; top:-800px; transition:1.5s;}
+		section.s0 {transition-delay: 0s;}
+		section.s1 {transition-delay: 0.5s;}
+		section.s2 {transition-delay: 1s;}
+		section.s3 {transition-delay: 1.5s;}
+		section.s4 {transition-delay: 2s;}
+		section.down {top:0;}
+		
+		section>div img{padding-bottom:0px; box-shadow:2px 2px 4px rgba(0,0,0,0.5);}
+		
+		section h2{display:none;}
+		#about {position:relative; transition:0.5s;}
+		#about .show {position:absolute; left:0; top:0; opacity:0;}
+		#about:hover .show{opacity:1; transform:scale(1.1) translateY(20px); }
+		
+		section:nth-child(2) {left:225px;}
+		#ost {position:relative;  transition:0.5s; }
+		#ost .show {position:absolute; left:0; top:0; opacity:0;}
+		#ost:hover .show{opacity:1; transform:scale(1.1) translateY(20px);}
+		
+		section:nth-child(3) {left:400px;}
+		#background {position:relative;  transition:0.5s;}
+		#background .show {position:absolute; left:0; top:0; opacity:0;}
+		#background:hover .show {opacity:1; transform:scale(1.1) translateY(20px);}
+		
+		section:nth-child(4) {left:780px;}
+		#tour {position:relative; transition:0.5s;}
+		#tour .show {position:absolute;  top:0;  left:0; opacity:0;}
+		#tour:hover .show {opacity:1; transform:scale(1.1) translateY(20px);}
+		
+		section:nth-child(5) {left:970px;}
+		#contents{position:relative; transition:0.5s;}
+		#contents .show{position:absolute;  top:0; left:0; opacity:0;}
+		#contents:hover .show {opacity:1; transform:scale(1.1) translateY(20px);}
+		
+		/*section:hover .show{opacity:1;}*/
+		</style>
+		
+		
+	</head>
+	<body>
+		<div id="layout">
+			<header>
+				<h1><i><a href="menu.html">Menu</a></i></h1>
+				<h2><i><a href="index.html">Home</a></i></h2>
+			</header>
+			<main>
+				<div id="slide">
+					<section class="s0">
+						<h2>About</h2>
+						<a href="about.html"><img src="images/menu_about1.png" alt="영화소개"></a>
+						<div id="about">
+							<a href="about.html"><img src="images/menu_about-1.jpg" alt="영화소개"></a>
+							<a href="about.html"><img src="images/menu_about.jpg" alt="영화소개" class="show"></a>
+						</div>
+					</section>
+					<section class="s1">
+						<h2>OST</h2>
+						<a href="ost.html"><img src="images/menu_ost1.png" alt="영화음악"></a>
+						<div id="ost">
+							<a href="ost.html"><img src="images/menu_ost-1.jpg" alt="영화소개"></a>
+							<a href="ost.html"><img src="images/menu_ost.jpg" alt="영화소개" class="show"></a>
+						</div>
+					</section>
+					<section class="s2">
+						<h2>Background</h2>
+						<a href="background.html"><img src="images/menu_background1.png" alt="영화음악"></a>
+						<div id="background">
+							<a href="background.html"><img src="images/menu_background-1.jpg" alt="영화소개"></a>
+							<a href="background.html"><img src="images/menu_background.jpg" alt="영화소개" class="show"></a>
+						</div>
+					</section>
+					<section class="s3">
+						<h2>Tour</h2>
+						<a href="tour.html"><img src="images/menu_tour1.png" alt="영화음악"></a>
+						<div id="tour">
+							<a href="tour.html"><img src="images/menu_tour-1.jpg" alt="영화소개"></a>
+							<a href="tour.html"><img src="images/menu_tour.jpg" alt="영화소개" class="show"></a>
+						</div>
+					</section>
+					<section  class="s4">
+						<h2>Contents</h2>
+						<a href="contents.html"><img src="images/menu_contents1.png" alt="영화음악"></a>
+						<div id="contents">
+							<img src="images/menu_contents-1.jpg" alt="영화소개">
+							<a href="contents.html"><img src="images/menu_contents.jpg" alt="영화소개" class="show"></a>
+						</div>
+					</section>
+				</div>
+			</main>
+		
+				
+			
+	
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>The Sound of Music</title>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+		$(document).ready(function(){
+			
+			$(".menu").on("mouseenter click", function(){
+				$(this).css("font-size","17pt");
+			 $("header>div>nav").fadeIn();
+			});
+			
+			$("header>div>nav").mouseleave(function(){
+				$(".menu").css("font-size","15pt");
+				$("header>div>nav").fadeOut();
+			});
+			
+			
+			
+			});
+		</script>
+		<style>
+		* {margin:0; padding:0; box-sizing:border-box;}
+		html, body{font:15pt/120% "나눔바른고딕", sans-serif; color:white;  /*letter-spacing:0.1em;*/ }
+		img{max-width:100%;}
+		a{text-decoration:none; color:white;}
+		
+		#layout	{width:1300px; height:790px; margin:auto; position:relative; background-image:url("images/background.jpg");}
+		
+		header>div	{display:flex; padding-top:5px; height:40px;}
+		header>div>h2	{flex:0.1; margin-right:10px;  margin-top:4px; }
+		.menu:hover {transform:scale(1.5);}
+		.menu{font-family:"Times new Roman"; color:#666464; font-size:15pt; padding-left:10px;}
+		
+		header>div>nav{ flex:0.6;  font-style:italic; background:rgba(255,255,255,0.3);  border-top-right-radius:15px;  margin-top:4px; display:none; padding:4px 6px;}
+		header nav>div{display:flex; justify-content:space-around;align-items:center;}
+		header nav a{font-family:"Times new Roman"; font-size:13pt;  padding-right:10px; /*border:1px solid red;*/ letter-spacing:0.05em;}
+				
+		
+		header>div>h3{flex:1; text-align:right; margin-right:10px; margin-top:4px;} 	
+		header>div>h3 a{font-family:"Times new Roman"; color:#666464; font-size:15pt; padding-left:10px;}
+		header>img{display:inline-block; padding:20px 45px 0 50px; }
+		header>img:last-child {margin-left:30px;}
+		
+		
+		main	{padding:20px 50px;}
+	
+		#actor{position:absolute; z-index:1;}
+		section{padding:20px; line-height:20pt; margin-right:35px; }
+		section>h3{padding-bottom:10px; padding-left:10px;font-weight:normal;}
+		section>p{font-size:12pt;}
+		section>img {float:left; margin-right:20px;}
+		section h6  {font-size:13pt; }
+		#movie {width:630px; height:331px; transform:translate(650px,340px); }
+		
+		.left{border:none; background:none; position:absolute; left:15px; top:46%;}
+		.right{border:none; background:none; position:absolute; right:15px; top:46%; z-index:1;}
+		
+		</style>
+		
+		
+	</head>
+	<body>
+		<div id="layout">
+			<header>
+				<div>
+					<h2><i><a href="menu.html" class="menu">Menu</a></i></h2>
+					<nav>
+						<div>
+						<a href="about.html">About</a>
+						<a href="ost.html">Ost</a>
+						<a href="background.html">Background</a>
+						<a href="tour.html">Tour</a>
+						<a href="contents.html">Contents</a>
+						</div>
+					</nav>
+					<h3><i><a href="index.html">Home</a></i></h3>
+				</div>
+				<img src="images/about_title2.png" alt="영화소개"><br>
+				
+			</header>
+			<main>
+				<div id="actor">
+					<section>
+					
+						<h3>등장인물</h3>
+						<img src="images/about_actor1.jpg" alt="줄리 앤드류스">
+						<b>줄리 앤드류스 Julie Andrews</b><br><br>
+						<h5>마리아 역</h5><br>
+						<p>영국의 연극배우 데임 줄리 앤드류스는「메리포핀스(1964)」와 「사운드오브뮤직(1965)」이라는 유명한 두 초기작으로 영화계에 성큼 뛰어 들었다. <br>두 영화는 그녀를
+							아카데미상후보로 올려 놓았고 그 중 「메리포핀스」는 여우주연상을 안겨 주었으며, 그녀를 모든 시대를 통틀어 가장 사랑받는 스크린의 아이콘 중 한명으로 만들었다.
+							앤드류스는 런던 웨스트엔드의 뮤지컬 「마이페어레이디(1956)」를 비롯하여 무대와 라디오의 다양한 작품들에서 가수 겸 여배우로 활동하고 있었다. 「마이페어레이디」의
+							두 작곡가 앨런 제이러너와 프레더릭로우는 그 후 「카멜롯」을 썼으며, 앤드류스는 1960년에 브로드웨이 무대에 올린 그 작품에서 쥬느비에브역을 연기했다.<br>
+							관객석에서 「카멜롯」을 보고 있던 월트디즈니가 공연이 끝나고 무대 뒤로 찾아가 앤드류스에게 「메리포핀스」의 주연 배역을 제안한 것이다. 그녀는 이어서 풍자극 「에밀리 미국사람
+							만들기(1964)」와 로저스와 하트만 콤비의 「사운드오브뮤직」에 출연하게 되었다. 그러나 알프레드 히치콕의 「찢어진커튼(1966)」과 「하와이(1966)」의 드라마 연기로는
+							초기 뮤지컬 연기로 얻은 인기에는 미치지 못했다.<br> 앤드류스는 1969년에 작가 겸 감독인 블레이크 에드워즈와 결혼했는데, 「텐(1979)」과 「할리우드의건달들(1981)」, 「
+							빅터빅토리아(1982)」등 그의 영화 몇 편에 출연했고, 그 중 「빅터빅토리아」로는 아카데미상 후보에 또 한번 올랐다. 안타깝게도 1998년에 한 성대수술로 그녀의 음성은
+							심각하게 손상되었다. 영화 출연이 줄면서 그녀는 아동작가라는 제 2의 인생을 시작했다. 「프린세스 다이어리(2001)」와 「프린세스 다이어리2(2004)」 그리고 애니메이션
+							영화「슈렉2(2004)」의 릴리언 왕비 등 최근의 역할들도 그녀를 다시 어린이들과 가깝게 했다.
+						</p><br>
+						<h6><b>다른 작품</b></h6><br>
+						<p>메리포핀스(1964,데뷔작), 사운드 오브 뮤직(1965), 프린세스다이어리(2001), 프린세스다이어리2(2004),<br>
+							아쿠아맨(2018), 슈퍼배드3(2017), 미스터 이빨요정(2010)</p>
+					</section>
+					
+				</div>
+				<div id="movie"><img src="images/about_movie1.png" alt="폰트랩호루라기"></div>
+				
+			</main>
+				<button type="button" class="left"><a href="about.html"><img src="images/left.png" alt="왼쪽버튼"></a></button>
+				
+				<button type="button" class="right"><a href="about2.html"><img src="images/right.png" alt="오른쪽버튼"></a></button>
+			
+	
+		</div>
+	</body>
+
+</html>
