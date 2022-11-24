@@ -27,7 +27,7 @@
 				$("#popup>div").eq(t1).fadeIn();
 			});			
 				
-			$("#showup button").click(function(){
+			$(".showup button").click(function(){
 					$("#popup>div").fadeOut();
 				});
 				
@@ -63,15 +63,15 @@
 		#gallery>div{display:flex; justify-content:space-between; flex-wrap:wrap; padding:15px 0 0 5px;}
 		#gallery>div img{margin:10px 10px; width:200px; height:200px;}
 		
-		#popup{}
+		#popup{ }
 		#popup>h4 {display:none;}
-		#showup{padding:150px 240px; top:0; background:rgba(0,0,0,0.9);  position:absolute;left:0; z-index:1; width:100%;height:100vh; display:none; }
+		.showup{padding:150px 240px; top:0; background:rgba(0,0,0,0.9);  position:absolute; left:0; z-index:1; width:100%; height:100vh; display:none; }
 		
-		#showup>div>img {position:absolute; top:80px; border:7px solid white;}
-		#showup button{border:none; background:none; font-size:1.5rem; float:right; color:white;}
+		.showup>img {position:absolute; top:200px; border:1px solid white;  width:850px;}
+		.showup button{border:none; background:none; font-size:1.5rem; left:1400px; color:white; position:fixed;}
 	
 		
-		.left{border:none; background:none; position:absolute; left:15px; top:46%;}
+		.left{position:absolute; left:15px; top:46%;}
 		
 		</style>
 		
@@ -114,43 +114,43 @@
 				</section>	
 				<section id="popup">
 					<h4>큰이미지</h4>
-					<div id="showup">
+					<div class="showup">
 						<button type="button">X</button>				
 						<img src="images/gallery1.jpg" alt="마리아 수녀">			
 					</div>	
-					<div id="showup">
+					<div class="showup">
 						<button type="button">X</button>				
 						 <img src="images/gallery2.jpg" alt="마리아 기타">				
 					</div>	
-					<div id="showup">
+					<div class="showup">
 						<button type="button">X</button>				
 						 <img src="images/gallery3.jpg" alt="마리아방">			
 					</div>	
-					<div id="showup">
+					<div class="showup">
 						<button type="button">X</button>				
 						 <img src="images/gallery4.jpg" alt="아이들산책">				
 					</div>	
-					<div id="showup">
+					<div class="showup">
 						<button type="button">X</button>				
 						<img src="images/gallery5.jpg" alt="폰트랩가족">			
 					</div>	
-					<div id="showup">
+					<div class="showup">
 						<button type="button">X</button>				
 						<img src="images/gallery6.jpg" alt="마리아와 폰트랩">			
 					</div>	
-					<div id="showup">
+					<div class="showup">
 						<button type="button">X</button>				
 						<img src="images/gallery7.jpg" alt="에델바이스">			
 					</div>
-					<div id="showup">
+					<div class="showup">
 						<button type="button">X</button>				
 						<img src="images/gallery8.jpg" alt="마리아와 폰트랩 왈츠">			
 					</div>
-					<div id="showup">
+					<div class="showup">
 						<button type="button">X</button>				
 						<img src="images/gallery9.jpg" alt="가족합창">			
 					</div>
-					<div id="showup">
+					<div class="showup">
 						<button type="button">X</button>				
 						<img src="images/gallery10.jpg" alt="폰트랩저택"> 		
 					</div>
@@ -169,7 +169,7 @@
 				</section>
 			</main>	
 			
-			<button type="button" class="left"><a href="contents.html"><img src="images/left.png" alt="왼쪽버튼"></a></button>	
+			<a href="contents.html" class="left"><img src="images/left.png" alt="왼쪽버튼"></a>
 		</div>
 	</body>
 
