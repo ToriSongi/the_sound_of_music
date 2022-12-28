@@ -21,86 +21,85 @@
 		</script>
 		<style>
 		* {margin:0; padding:0; box-sizing:border-box;}
-		html, body{font:16pt/120% "나눔바른고딕", sans-serif;  }
+		html, body{font:16pt/120% "나눔바른고딕", sans-serif;  /*background:linear-gradient(130deg, #69beed,  #69beed, #405b00);*/ }
+		body{}
 		img{max-width:100%;}
 		a{text-decoration:none; color:white;}
-		
-		#layout	{width:1300px; margin:auto; position:relative; background:#5fb4e5 ; }
-		header	{display:flex;}
-		header>h1{flex:1;}
-		header>h1 a{font-family:"Times new Roman"; font-size:19pt; padding-left:10px;}
+		#wrapper{width:2000px;  height:1300px; margin:auto; background:url("images/index-bg.jpg")no-repeat center/cover;  }
+		#layout	{width:1600px; height:950px; margin:auto; position:relative; }
+		header	{display:flex; }
+		header>h1{flex:1; margin-top:30px; font-size:24pt; text-shadow:2px 2px 5px rgba(0,0,0,0.8);}
+		header>h1 a{font-family:"Times new Roman"; font-size:19pt; padding-left:10px; }
 		header>a{display:inline-block; padding:20px 45px 0 10px; transition:0.5s; }
 		header>a:hover{opacity:80%; transform:scale(1.2);}
 		
-		main	{display:flex; padding:0 30px;}
-		main>section{position:absolute; top:30px; left:100px;}
+		main	{display:flex; padding:0 30px; width:1600px;}
+		main>section{}
+		main>section>img{position:absolute; top:140px; left:130px; transition:0.6s;}
+		.two{top:130px; left:300px;}
+		.three{top:140px; left:420px;}
+	
+		main>section>img:hover{transform:scale(1.2); z-index:1;}
 		main>section>h2 {display:none; }
 		main>div {flex:1.5;}
-		main>section>img{}
-		/*main>section>img:hover {transform:rotate(15deg) scale(0.9);}*/
+		main>section>img{width:33%;}
 		
 		aside{flex:1; margin-top:95px; text-align:right; }
 		
-		#stillcut {position:relative; right:20px;}
-		#stillcut img:not(:first-child){position:absolute; top:0; right:1px;}
-		#music{display:flex;  align-items:right; margin-left:170px; height:50px;}
-		/*#music>img{margin-left:20px;}
-		#music>div {background:white; width:320px; border-radius:30px; font-size:0.6rem; text-align:right; margin-left:20px;}*/
+		#stillcut {position:relative; right:20px; height:400px; }
+		#stillcut img{position:absolute; top:100px; right:1px; box-shadow:3px 3px 5px rgba(0,0,0,0.4);}
+		#music{display:flex;  align-items:right; margin-left:290px; height:90px; margin-top:20px;}
+		
+		/*#music>img{margin-left:20px;}#music>div {background:white; width:320px; border-radius:30px; font-size:0.6rem; text-align:right; margin-left:20px;}*/
 		
 		
-		 #note{position:absolute; opacity:0.4;  top:680px; left:1000px; animation:move 6s 1 linear; animation-delay: 0.6s; }
+		 #note{position:absolute; opacity:0.8;  top:1020px; left:1320px; animation:move 6s 1 linear; animation-delay: 0.6s; }
 		@keyframes move {
-			  0%  {left: 0px; top:690px; opacity:1; }
-			  14% {left: 186px; top:660px; opacity:1;}
-			  28% {left: 354px; top:730px; opacity:0.8; }
-			  42% {left: 520px; top:660px; opacity:0.8; }
-			  56% {left: 660px; top:720px; opacity:0.6;}
-			  70% {left: 790px; top:670px; opacity:0.6;}
-			  84% {left: 900px; top:700px; opacity:0.4; }
-		      100%{left: 1000px; top:680px; opacity:0.4;}
+			  0%  {left: -20px; top:950px; opacity:1; }
+			  14% {left: 170px; top:1000px; opacity:1;}
+			  28% {left: 360px; top:940px; opacity:0.8; }
+			  42% {left: 550px; top:1020px; opacity:0.8; }
+			  56% {left: 740px; top:950px; opacity:0.6;}
+			  70% {left: 930px; top:1010px; opacity:0.6;}
+			  84% {left: 1120px; top:960px; opacity:0.5; }
+		      100%{left: 1310px; top:1020px; opacity:0.8;}
 			}
 			
-		#note1{position:absolute; opacity:0.4; top:685px; left:1110px; animation:move1 5s 1 linear; }
+		#note1{position:absolute; opacity:0.8; top:1000px; left:1450px; animation:move1 5s 1 linear; }
 				
 				
 					@keyframes move1 {
-			  0%  {left: 0px; top:650px; opacity:1; }
-			  14% {left: 186px; top:730px; opacity:1;}
-			  28% {left: 354px; top:660px; opacity:0.8; }
-			  42% {left: 520px; top:720px; opacity:0.8; }
-			  56% {left: 686px; top:650px; opacity:0.6;}
-			  70% {left: 850px; top:700px; opacity:0.6;}
-			  84% {left: 1000px; top:660px;opacity:0.4; }
-		      100%{left: 1110px; top:685px; opacity:0.4;}
+			  0%  {left: 50px; top:890px; opacity:1; }
+			  14% {left: 250px; top:960px; opacity:1;}
+			  28% {left: 450px; top:900px; opacity:0.8; }
+			  42% {left: 650px; top:970px; opacity:0.8; }
+			  56% {left: 850px; top:910px; opacity:0.6;}
+			  70% {left: 1050px; top:980px; opacity:0.6;}
+			  84% {left: 1250px; top:920px;opacity:0.5; }
+		      100%{left: 1450px; top:1000px; opacity:0.8;}
 			}
 				
 				
-				/*@keyframes move1 {
-			  0%  {left: -20px; top:650px; }
-			  14% {left: 186px; top:620px; }
-			  28% {left: 354px; top:640px; }
-			  42% {left: 520px; top:610px; }
-			  56% {left: 686px; top:630px; }
-			  70% {left: 852px; top:650px; }
-			  84% {left: 1010px; top:670px; }
-		      100%{left: 1110px; top:685px; }
-			}*/
+			
+		#music1 {margin-top:190px; padding:30px;}
 		
-		#note+img {margin-top:10px; padding:30px;}
 		/*main+img:hover {transform:translateY(-10px); opacity:0.6;}*/
 		</style>
 		
 		
 	</head>
 	<body>
+	<div id="wrapper">
 		<div id="layout">
 			<header>
-				<h1><i><a href="index.html">The Sound of Music</a></i></h1>
+				<h1><i><a href="index.html">The Sound of Music </a></i></h1>
 				<a href="menu.html"><img src="images/main_menu.png" alt="메뉴버튼"></a>
 			</header>
 			<main>
 				<section>
 					<h2>사운드 오브 뮤직 포스터</h2>
+					<img src="images/main_poster3.png" alt="포스터"  class="three">
+					<img src="images/main_poster2.png" alt="포스터"  class="two">
 					<img src="images/main_poster.png" alt="포스터">
 				</section>
 				<div></div>
@@ -124,12 +123,12 @@
 				</aside>
 				
 			</main>
-					<div id="note"><img src="images/note.png" alt="음표"></div>
-					
-					<img src="images/main_title.png" alt="title">
-			<div id="note1"><img src="images/note1.png" alt="음표"></div>
+					<img src="images/titlenote.png" alt="title"  id="music1">
+					<img src="images/note.png" alt="음표"  id="note">
+					<img src="images/note1.png" alt="음표" id="note1"></div>
 	
 		</div>
+	</div>
 	</body>
 
 </html>

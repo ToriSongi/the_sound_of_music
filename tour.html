@@ -4,17 +4,18 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width">
 		<title>The Sound of Music</title>
+		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Nanum+Gothic:wght@400;700;800&family=Noto+Serif+KR:wght@300;400;500;600;700;900&family=Sevillana&display=swap" rel="stylesheet">
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<script>
 		$(document).ready(function(){
 			
 			$(".menu").on("mouseenter click", function(){
-				$(this).css("font-size","17pt");
+				$(".menu").fadeOut();
 			 $("header>div>nav").fadeIn();
 			});
 			
 			$("header>div>nav").mouseleave(function(){
-				$(".menu").css("font-size","15pt");
+				$(".menu").fadeIn();
 				$("header>div>nav").fadeOut();
 			});
 			
@@ -28,33 +29,35 @@
 		img{max-width:100%;}
 		a{text-decoration:none; color:white;}
 		
-		#layout	{width:1300px; height:790px; margin:auto; position:relative; background-image:url("images/background.jpg");}
-		header>div	{display:flex; padding-top:5px; height:40px;}
+		#layout	{width:1600px; height:1040px; margin:auto; position:relative; background:url("images/tour-bg.jpg")no-repeat center/cover;}
+		header h1{display:none;}
+		header>div	{display:flex;  padding:5px 20px; height:55px;}
 		header>div>h2	{flex:0.1; margin-right:10px;  margin-top:4px; }
 		.menu:hover {transform:scale(1.5);}
-		.menu{font-family:"Times new Roman"; color:#666464; font-size:15pt; padding-left:10px;}
+		.menu{font-family:"Times new Roman"; color:#ccc;  font-size:15pt; padding-left:10px;}
 		
-		header>div>nav{ flex:0.6;  font-style:italic; background:rgba(255,255,255,0.3);  border-top-right-radius:15px;  margin-top:4px; display:none; padding:4px 6px;}
-		header nav>div{display:flex; justify-content:space-around;align-items:center;}
-		header nav a{font-family:"Times new Roman"; font-size:13pt;  padding-right:10px; /*border:1px solid red;*/ letter-spacing:0.05em;}
+		header>div>nav{ flex:0.6;   background:rgba(255,255,255,0.3);  border-radius:35px;  margin-top:4px; display:none; padding:7px 10px; text-shadow:2px 2px 4px rgba(0,0,0,0.7); margin-left:-70px;}
+		header nav>div{display:flex; justify-content:space-around; align-items:center;}
+		header nav a{font-family:"Times new Roman"; font-size:13pt;  padding-right:10px; letter-spacing:0.05em;}
 				
 		
-		header>div>h3{flex:1; text-align:right; margin-right:10px; margin-top:4px;}
-		header>div>h3 a{font-family:"Times new Roman"; color:#666464; font-size:15pt; padding-left:10px;}
+		header>div>h3{flex:1; text-align:right; margin-right:20px; margin-top:4px;} 
+		header>div>h3 a{font-family:"Times new Roman"; color:#ccc;  font-size:15pt; padding-left:10px;}
 		header>img{display:inline-block; padding:20px 45px 0 50px; }
 		
-		main	{display:flex; padding:40px 30px;}
-		#tourpic {flex:0.8; padding:30px; background:rgba(255,255,255,0.5); margin:0 40px 0 15px; }
-		#tourpic img:first-child {margin-bottom:20px;}
-		#tourpic img{transition:0.5s;}
-		#tourpic img:hover{transform:scale(1.5) translateX(61px); border:8px solid white; box-shadow:2px 2px 4px rgba(0,0,0,0.7);}
 		
-		main section{flex:1;}
-		section h3{font-size:16pt;}
-		section>a:hover{text-decoration:underline;}
 		
-		iframe{position:absolute; top:520px; left:980px; box-shadow:2px 2px 4px rgba(0,0,0,0.5);}
 		
+		main	{display:flex; padding:20px 90px;}
+		main section{background: rgba(255,255,255,0.7); padding:40px 140px; /*border-bottom:5px solid black;  border-right:5px solid black;*/ border-radius:30px;}
+		section h3{font-size:25pt; /*text-shadow:2px 2px 4px rgba(0,0,0,0.6);*/ color:#f83507;}
+	
+		section p{color:#21221c;}
+		section b{font-size:18pt; font-style:italic;}
+		section a{line-height:180%; font-family: 'Sevillana', sans-serif;  font-size:15pt; font-style:italic; color:tomato; font-weight:bold; text-shadow:2px 2px 3px rgba(0,0,0,0.9);}
+		section a img {width:510px;}
+		section a{transition:0.6s;}
+		section a:hover{margin-left:60px;} 
 		.right{position:absolute; right:15px; top:46%; z-index:1;}
 		</style>
 		
@@ -79,29 +82,26 @@
 				<img src="images/tour_title1.png" alt="영화 촬영지 투어 타이틀"><br>
 			</header>
 			<main>
-				<div id="tourpic">
-					<img src="images/trip1-1.jpg" alt="영화미라벨정원"><br>
-					<img src="images/trip1-2.jpg" alt="미라벨정원"><br>
-				</div>
-				<section>
-				<h3>미라벨정원 Mirabell garten</h3><br>
-				<p>
-				주소: Mirabellplatz 3, 5020 Salzburg, Austria.<br>
-				입장료: 무료<br><br>
-
-				유명한 ‘도레미 송’의 촬영지<br><br>
-
-				오스트리아 잘츠부르크의 정원<br>
-				미라벨궁 정면에 있는 푸르른 정원으로 우아한 경치, 오솔길, 꽃 풍경을 즐길 수 있습니다.
-
 				
-				</p><br>
-				<a href="https://www.stadt-salzburg.at/mirabellgarten/" target="_blank"><i>https://www.stadt-salzburg.at/mirabellgarten/</i></a>
+				<section>
+					<h3>&quot;사운드 오브 뮤직 영화 촬영지 여행하기&quot;</h3><br>
+					<p>
+						<b>사운드 오브 뮤직의 촬영지인 짤츠부르크 일대를 돌아보세요!</b><br><br>
+						
+						그림같은 아름다운 풍경과 사운드 오브 뮤직의 음악, <br> 그리고 영화의 장면을 떠올리며 멋진 추억을 만드시길 바랍니다.
+
+					</p><br>
+					<a href="tour1.html"><img src="images/gotour1.png" alt="미라벨정원가기"></a><br>
+					<a href="tour2.html"><img src="images/gotour2.png" alt="호텔슐로스가기"></a><br>
+					<a href="tour3.html"><img src="images/gotour3.png" alt="헬브룬궁전가기"></a><br>
+					<a href="tour4.html"><img src="images/gotour4.png" alt="생길겐가기"></a><br>
+					<a href="tour5.html"><img src="images/gotour5.png" alt="수녀원가기"></a><br>
+					<a href="tour6.html"><img src="images/gotour6.png" alt="몬드제성당가기"></a><br>
+					<a href="tour7.html"><img src="images/gotour7.png" alt="버스투어가기"></a>
 				</section>
 				
 			</main>
 		
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2679.80640729635!2d13.040121615826044!3d47.804588382272684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47769064cc2367c5%3A0x49f976a9ca845537!2z66-4652867KoIOygleybkA!5e0!3m2!1sko!2skr!4v1669099175172!5m2!1sko!2skr" width="250" height="250" style="border-radius:10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 			
 		<a href="tour1.html"  class="right"><img src="images/right.png" alt="오른쪽버튼" ></a>
 		</div>

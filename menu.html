@@ -23,11 +23,11 @@
 		img{max-width:100%;}
 		a{text-decoration:none; color:white;}
 		
-		#layout	{width:1300px; height:790px; margin:auto; position:relative; background-image:url("images/background.jpg");}
+		#layout	{width:1600px; height:950px; margin:auto; position:relative; background:url("images/menu-bg4.png")no-repeat center/cover ;}
 		header	{display:flex; padding-top:10px;}
-		header>h1{flex:1;}
+		header>h1{flex:1; margin-left:20px;}
 		header>h1 a{font-family:"Times new Roman"; color:#666464; font-size:15pt; padding-left:10px;}
-		header>h2{flex:1; text-align:right; margin-right:10px;}
+		header>h2{flex:1; text-align:right; margin-right:30px;}
 		header>h2 a{font-family:"Times new Roman"; color:#666464; font-size:15pt; padding-left:10px;}
 		header>a{display:inline-block; padding:20px 45px 0 10px; }
 		
@@ -35,13 +35,13 @@
 		
 		#slide {position:relative; }
 		
-		section    {position:absolute; top:-800px; transition:1.5s;}
-		section.s0 {transition-delay: 0s;}
+		section    {position:absolute; top:-800px; left:90px; transition:1.5s; }
+		section.s0 {transition-delay: 0s; }
 		section.s1 {transition-delay: 0.5s;}
 		section.s2 {transition-delay: 1s;}
 		section.s3 {transition-delay: 1.5s;}
 		section.s4 {transition-delay: 2s;}
-		section.down {top:0;}
+		section.down {top:30px;}
 		
 		section>div img{padding-bottom:0px; box-shadow:2px 2px 4px rgba(0,0,0,0.5);}
 		
@@ -50,22 +50,22 @@
 		#about .show {position:absolute; left:0; top:0; opacity:0;}
 		#about:hover .show{opacity:1; transform:scale(1.1) translateY(20px); }
 		
-		section:nth-child(2) {left:225px;}
+		section:nth-child(2) {left:342px;}
 		#ost {position:relative;  transition:0.5s; }
 		#ost .show {position:absolute; left:0; top:0; opacity:0;}
 		#ost:hover .show{opacity:1; transform:scale(1.1) translateY(20px);}
 		
-		section:nth-child(3) {left:400px;}
+		section:nth-child(3) {left:545px;}
 		#background {position:relative;  transition:0.5s;}
 		#background .show {position:absolute; left:0; top:0; opacity:0;}
 		#background:hover .show {opacity:1; transform:scale(1.1) translateY(20px);}
 		
-		section:nth-child(4) {left:780px;}
+		section:nth-child(4) {left:954px;}
 		#tour {position:relative; transition:0.5s;}
 		#tour .show {position:absolute;  top:0;  left:0; opacity:0;}
 		#tour:hover .show {opacity:1; transform:scale(1.1) translateY(20px);}
 		
-		section:nth-child(5) {left:970px;}
+		section:nth-child(5) {left:1172px;}
 		#contents{position:relative; transition:0.5s;}
 		#contents .show{position:absolute;  top:0; left:0; opacity:0;}
 		#contents:hover .show {opacity:1; transform:scale(1.1) translateY(20px);}

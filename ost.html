@@ -9,15 +9,14 @@
 		$(document).ready(function(){
 			
 			$(".menu").on("mouseenter click", function(){
-				$(this).css("font-size","17pt");
+				$(".menu").fadeOut();
 			 $("header>div>nav").fadeIn();
 			});
 			
 			$("header>div>nav").mouseleave(function(){
-				$(".menu").css("font-size","15pt");
+				$(".menu").fadeIn();
 				$("header>div>nav").fadeOut();
 			});
-			
 			
 			
 			});
@@ -29,30 +28,31 @@
 		a{text-decoration:none; color:white;}
 		
 	
-		#layout	{width:1300px; height:790px; margin:auto; position:relative; background-image:url("images/background.jpg"); position:relative;}
-		header>div	{display:flex; padding-top:5px; height:40px;}
+		#layout	{width:1600px; height:1040px; margin:auto; position:relative; background:url("images/background.jpg")no-repeat center/cover;}
+		header h1{display:none;}
+		header>div	{display:flex;  padding:5px 20px; height:55px;}
 		header>div>h2	{flex:0.1; margin-right:10px;  margin-top:4px; }
 		.menu:hover {transform:scale(1.5);}
 		.menu{font-family:"Times new Roman"; color:#666464; font-size:15pt; padding-left:10px;}
 		
-		header>div>nav{ flex:0.6;  font-style:italic; background:rgba(255,255,255,0.3);  border-top-right-radius:15px;  margin-top:4px; display:none; padding:4px 6px;}
-		header nav>div{display:flex; justify-content:space-around;align-items:center;}
-		header nav a{font-family:"Times new Roman"; font-size:13pt;  padding-right:10px; /*border:1px solid red;*/ letter-spacing:0.05em;}
+		header>div>nav{ flex:0.6;   background:rgba(255,255,255,0.3);  border-radius:35px;  margin-top:4px; display:none; padding:7px 10px; text-shadow:2px 2px 4px rgba(0,0,0,0.7); margin-left:-70px;}
+		header nav>div{display:flex; justify-content:space-around; align-items:center;}
+		header nav a{font-family:"Times new Roman"; font-size:13pt;  padding-right:10px; letter-spacing:0.05em;}
 				
 		
-		header>div>h3{flex:1; text-align:right; margin-right:10px; margin-top:4px;}
+		header>div>h3{flex:1; text-align:right; margin-right:20px; margin-top:4px;} 
 		header>div>h3 a{font-family:"Times new Roman"; color:#666464; font-size:15pt; padding-left:10px;}
 		header>img{display:inline-block; padding:20px 45px 0 50px; }
 		
-		main	{display:flex; padding:40px 90px;}
+		main	{display:flex; padding:50px 120px; margin-left:50px;}
 	
 		section h2{display:none;}
 		
 		figcaption {font-size:10pt; text-align:center; line-height:12pt; font-family:"Times New Roman"; letter-spacing:0.02em;}
 		
 		
-		aside{position:absolute; top:65px; left:540px; font-size:11pt;  font-family:"Times New Roman"; font-weight:bold; line-height:21pt; z-index:1; letter-spacing:0.02em;}
-		#movie {width:630px; height:331px; transform:translate(640px,-310px); }
+		aside{position:absolute; top:100px; left:660px; font-size:15pt;  font-family:"Times New Roman"; font-weight:bold; line-height:25pt; z-index:1; letter-spacing:0.02em; text-shadow:2px 2px 4px rgba(0,0,0,0.6);}
+		#movie {width:630px; height:331px; transform:translate(860px,-240px); }
 		</style>
 		
 		
@@ -61,9 +61,11 @@
 		<div id="layout">
 			<header>
 				<div>
-					<h2><i><a href="menu.html" class="menu">Menu</a></i></h2>
+					<h1>감독 및 배우 소개</h1>
+					<h2><i  class="menu"> Menu</i></h2>
 					<nav>
 						<div>
+						<a href="menu.html" style="color:#ddd;">Menu</a>
 						<a href="about.html">About</a>
 						<a href="ost.html">Ost</a>
 						<a href="background.html">Background</a>

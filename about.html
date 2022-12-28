@@ -4,20 +4,35 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width">
 		<title>The Sound of Music</title>
+		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Nanum+Gothic:wght@400;700;800&family=Noto+Serif+KR:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		
 		<script>
 		$(document).ready(function(){
 			
 			$(".menu").on("mouseenter click", function(){
-				$(this).css("font-size","17pt");
+				$(".menu").fadeOut();
 			 $("header>div>nav").fadeIn();
 			});
 			
 			$("header>div>nav").mouseleave(function(){
-				$(".menu").css("font-size","15pt");
+				$(".menu").fadeIn();
 				$("header>div>nav").fadeOut();
 			});
 			
+			$("#director").click(function(){
+				$(".showup").eq(3).fadeIn();
+			});
+			
+			$("#actor>div>section").click(function(){
+				const od=$(this).index();
+				$(".showup ").eq(od).fadeIn();
+				
+				});
+			
+			$(".showup").click(function(){
+				$(".showup ").fadeOut();
+				});
 			
 			
 			});
@@ -28,36 +43,53 @@
 		img{max-width:100%;}
 		a{text-decoration:none; color:white;}
 		
-		#layout	{width:1300px; height:790px; margin:auto; position:relative; background-image:url("images/background.jpg");}
+		#layout	{width:1600px; height:1250px; margin:auto; position:relative; background:url("images/about-bg.jpg")no-repeat center/cover; position:relative;}
 		
+		header h1{display:none;}
+		header>div	{display:flex; padding:5px 20px; height:55px;}
+		header>div>h2	{flex:0.1; margin-right:10px;  margin-top:4px;  color:#666464;}
 		
-		header>div	{display:flex; padding-top:5px; height:40px;}
-		header>div>h2	{flex:0.1; margin-right:10px;  margin-top:4px; }
-		.menu:hover {transform:scale(1.5);}
-		.menu{font-family:"Times new Roman"; color:#666464; font-size:15pt; padding-left:10px;}
+		.menu{font-family:"Times new Roman"; color:#ccc; font-size:15pt; padding-left:10px;}
+		.home{font-family:"Times new Roman"; color:#ccc; font-size:15pt; padding-left:10px;}
 		
-		header>div>nav{ flex:0.6;  font-style:italic; background:rgba(255,255,255,0.3);  border-top-right-radius:15px;  margin-top:4px; display:none; padding:4px 6px;}
-		header nav>div{display:flex; justify-content:space-around;align-items:center;}
-		header nav a{font-family:"Times new Roman"; font-size:13pt;  padding-right:10px; /*border:1px solid red;*/ letter-spacing:0.05em;}
+		header>div>nav{ flex:0.6;   background:rgba(255,255,255,0.3);  border-radius:35px;  margin-top:4px; display:none; padding:7px 10px; text-shadow:2px 2px 4px rgba(0,0,0,0.7); margin-left:-70px;}
+		header nav>div{display:flex; justify-content:space-around; align-items:center;}
+		header nav a{font-family:"Times new Roman"; font-size:13pt;  padding-right:10px; letter-spacing:0.05em;}
 				
 		
-		header>div>h3{flex:1; text-align:right; margin-right:10px; margin-top:4px;} 
+		header>div>h3{flex:1; text-align:right; margin-right:10px; margin-top:4px; color:#666464; } 
 		header>div>h3 a{font-family:"Times new Roman"; color:#666464; font-size:15pt; padding-left:10px;}
 		
-		header>img{display:inline-block; padding:20px 45px 0 50px; }
+		header>img{display:inline-block; padding:20px 45px 0 70px; }
 		header>img:last-child {margin-left:30px;}
 		
-		main	{padding:20px 30px;}
-	
-		#info{position:absolute; z-index:1;}
-		section{padding:20px; line-height:20pt; }
-		section>h3{padding-bottom:10px; padding-left:10px;font-weight:normal;}
-		section>p{font-size:12pt;}
-		#director>img {float:left; margin-right:20px;}
-		#director>p>b(:first-of-type) {font-size:20pt; }
-		#movie {width:630px; height:331px; transform:translate(590px,200px); }
+		main	{padding:10px 130px; margin-top:-40px;}
 		
-		.right{position:absolute; right:15px; top:46%; z-index:1;}
+		.curv{font-family: 'Dancing Script', cursive; text-shadow:2px 2px 4px rgba(0,0,0,0.7);}
+		
+		#director{display:flex; align-items:center; padding:30px 0 30px 300px;}
+		#director div {margin-left:30px;}
+		#director div h2{padding-bottom:30px; font-weight:700; font-size:2.5rem;}
+		#director div p{padding-left:5px;}
+		
+		#actor{padding-top:40px; border-top:1px solid white;}
+		
+		#actor>div{display:flex; align-items:center; }
+		#actor section{flex:1; padding:0 50px;}
+		#actor section:first-of-type {margin:30px;}
+		#actor section img {margin:20px;}
+		#actor section div {text-align:center;}
+		#actor section div h2{padding-bottom:10px;}
+		#actor h4 {font-family: 'Dancing Script', cursive; text-shadow:2px 2px 4px rgba(0,0,0,0.7); padding-left:30px;  font-size:2.8rem; }
+		
+		.showup{ position:absolute; top:0; left:0; background:rgba(0,0,0,0.85); width:100%; height:100%; display:none;} 
+		.showup>section{  background:url("images/elegance1.png")no-repeat center/cover; position:absolute; top:300px; left:380px; z-index:1; width:850px; height:650px; padding:210px 130px 150px 130px; font-family: 'Nanum Gothic', sans-serif; color:white;}
+		.showup>section h4{text-shadow:2px 2px 4px rgba(0,0,0,0.7);}
+		.showup>section>img {float:right; margin:0 20px; box-shadow:3px 3px 5px rgba(0,0,0,0.7); border:5px ridge #ebb444;}
+		.showup>section p{font-size:13pt; line-height:160%; color:#0e0e0e; font-weight:600; text-shadow:0px 0px 5px rgba(255,255,255,1);}
+		.showup>section a{font-size:20pt; font-weight:900; text-align:right; display:block; margin-top:10px; font-family: 'Dancing Script', cursive; color:#ebb444; text-shadow:0px 0px 5px rgba(0,0,0,1); margin-top:-10px;}
+		
+		.right{position:absolute; right:25px; top:450px; z-index:1;}
 		
 		</style>
 		
@@ -67,49 +99,91 @@
 		<div id="layout">
 			<header>
 				<div>
-					<h2><i><a href="menu.html" class="menu">Menu</a></i></h2>
+					<h1>감독 및 배우 소개</h1>
+					<h2><i  class="menu"> Menu</i></h2>
 					<nav>
 						<div>
-						<a href="about.html">About</a>
-						<a href="ost.html">Ost</a>
-						<a href="background.html">Background</a>
-						<a href="tour.html">Tour</a>
-						<a href="contents.html">Contents</a>
+							<a href="menu.html" style="color:#ddd;">Menu</a>
+							<a href="about.html">About</a>
+							<a href="ost.html">Ost</a>
+							<a href="background.html">Background</a>
+							<a href="tour.html">Tour</a>
+							<a href="contents.html">Contents</a>
 						</div>
 					</nav>
-					<h3><i><a href="index.html">Home</a></i></h3>
+					<h3><i><a href="index.html"  class="home">Home</a></i></h3>
 				</div>
 				<img src="images/about_title1.png" alt="영화소개"><br>
-				<img src="images/about_h1.png" alt="사운드오브뮤직">
+				
 			</header>
 			<main>
-				<div id="info">
-					<section>
-						<h3>기획의도</h3>
-						<p>요즘 그래픽의 발달로 CG가 가미된 화려한 블럭버스터 영화와 많은 영화효과로 제작된 대작이 넘쳐나고 있습니다.<br>
-						하지만 이 영화는 그런 기술이 많이 들어간 영화는 아니지만, 그림같은 알프스의 배경과 아름다운 하모니와 멜로디를 감상할 수 있는 뮤지컬 영화의 고전 중 하나 입니다.<br>
-						오래된 영화라 화면이 낡고 선명하진 않지만 최신 멋진 영화 속에 이 같은 정서와 따뜻함을 느끼게 한 영화가 있을까 하는 의미로 다시 들여다 보며 그 감성을 다시 느끼고자 시작 하였습니다.
-						</p>
-					</section>
-					<section>
-						<h3>줄거리</h3>
-						<p>음악을 사랑하는 말괄량이 견습수녀 ‘마리아’는 원장수녀의 권유로 해군명문 집안 폰트랩가의 가정교사가 된다.<br>
-						‘마리아’는 좀처럼 엄마를 잃고 마음의 문을 열지 않는 폰트랩 가의 일곱 아이들에게 노래를 가르치며 점차 교감하며 가까워지게 되고, 엄격한 ‘폰트랩 대령’ 역시 마음의 문을 열게 된다.<br>
-						그러던 어느날, ‘마리아’는 자신이 ‘폰트랩 대령’을 사랑하고 있다는 사실을 깨닫게 되고, 자신만의 비밀을 간직한 채 아이들의 곁을 떠나 다시 수녀원에 들어가기로 결심 하는데...
-						</p>
-					</section>
-					<section id="director">
-						<h3>감독</h3>
-						<img src="images/about_director.jpg" alt="로버트 와이즈">
-						<p><b>로버트 와이즈 RobertWise</b><br><br>
-							<b>다른 작품</b><br>
-							발 류튼: 그림자 속의 사나이 Val Lewton: The Man In The Shadows, 2007<br>
-							스톰 인 썸머 A Storm In Summer, 2000
-						</p>
-					</section>
+				<section id="director">
+					<img src="images/director.png" alt="감독">
+					<div>
+						<h2 class="curv">Director</h2>
+						<p class="curv">Robert Earl Wise</p>
+					</div>
+				</section>
+				<div id="actor">
+					<h4>Actor</h4>
+					<div>
+						<section>
+							<img src="images/actor1.png" alt="줄리 앤드류스">
+							<div>
+								<h2 class="curv">Maria</h2>
+								<p class="curv">Julie Andrews</p>
+							</div>
+						</section>
+						<section>
+							<img src="images/actor2.png" alt="크리스토퍼 플럼">
+							<div>
+								<h2 class="curv">Georg von Trapp</h2>
+								<p class="curv">Christopher Plummer</p>
+							</div>
+						</section>
+						<section>
+							<img src="images/actor3.png" alt="엘레노 파커">
+							<div>
+								<h2 class="curv">Baroness Elsa von Schraeder</h2>
+								<p class="curv">Eleanor Parker</p>
+							</div>
+						</section>
+					</div>
 				</div>
-				<div id="movie"><img src="images/about_movie.png" alt="수녀원장면"></div>
-				
+				<div class="showup">
+						<section>
+							<img src="images/about_actor1.jpg" alt="마리아역 사진">
+							<h4>줄리 앤드류스 Julie Andrews</h4><br> 
+							<p>마리아 역 <br> <br> 수녀원 견습 수녀.<br> 노래를 좋아하는 말괄량이 수녀다. <br>  원장수녀의 권유로 폰트랩대령 저택 일곱 아이들의 가정교사로 들어가게 되는데....</p>
+							<a href="about2.html">More +</a>
+						</section>
+				</div>
+				<div class="showup">
+						<section>
+							<img src="images/about_actor2.jpg" alt="본트랩 역  사진">
+							<h4>크리스토퍼 플러머 <br>Christopher Plummer</h4><br> 
+							<p>캡틴 조지 본트랩 역 <br> <br> 고집 세고 뼛속까지 군인 정신이 박힌 사람.<br> 애국심이 강하며, 자신의 가정을 이끄는 방식에 대해서도 확고한 신념이 있다. <br> 퇴역한 해군 장교 출신으로 전장에서 세운 공이 꽤 크다.  </p>
+							<a href="about3.html">More +</a>
+						</section>
+				</div>
+				<div class="showup">
+						<section>
+							<img src="images/about_actor3.jpg" alt="남작부인 역 사진">
+							<h4>엘레노 파커 Eleano Parker</h4><br> 
+							<p>남작부인 역 <br> <br> 대령은 그녀를 '엘자'라고 부르고 있다.  <br>마리아나 아이들은 보통 남작 부인(Baroness)으로 부른다. <br>
+									비엔나에 거주하는 미모의 부유한 과부이다. 똑같이 배우자를 잃은 처지의 대령과 서로 깊은 감정을 품고 있다. </p>
+									<a href="about3.html">More +</a>
+						</section>
+				</div>
+				<div class="showup">
+						<section>
+							<img src="images/about_director.jpg" alt="감독 사진">
+							<h4>로버트 와이즈 Robert Earl Wise</h4><br> 
+							<p>감독<br> <br> 첫 연출작은 캣 피플의 저주인데 이 작품도 호러 영화의 고전 중 하나로 꼽힌다. SF 영화계의 고전 중 하나인 『지구가 멈추는 날』도 연출하였고, 그의 경력 중 가장 중요한 작품은 역시 두 뮤지컬 영화인 『웨스트 사이드 스토리』와 『사운드 오브 뮤직』일 것이다.</p>
+							<a href="about1.html">More +</a>
+						</section>
+				</div>
+			
 			</main>
 		
 			<a href="about1.html"  class="right"><img src="images/right.png" alt="오른쪽버튼" ></a>

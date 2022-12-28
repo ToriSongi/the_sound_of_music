@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>The Sound of Music</title>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+		$(document).ready(function(){
+		
+			$(".menu").on("mouseenter click", function(){
+				$(".menu").fadeOut();
+			 $("header>div>nav").fadeIn();
+			});
+			
+			$("header>div>nav").mouseleave(function(){
+				$(".menu").fadeIn();
+				$("header>div>nav").fadeOut();
+			});
+			
+			
+			
+			});
+		</script>
+		<style>
+		* {margin:0; padding:0; box-sizing:border-box;}
+		html, body{font:15pt/120% "나눔바른고딕", sans-serif; color:white;  /*letter-spacing:0.1em;*/ }
+		img{max-width:100%;}
+		a{text-decoration:none; color:white;}
+		
+		#layout	{width:1600px; height:1040px; margin:auto; position:relative; background:url("images/background.jpg")no-repeat center/cover;}
+		header h1{display:none;}
+		header>div	{display:flex;  padding:5px 20px; height:55px;}
+		header>div>h2	{flex:0.1; margin-right:10px;  margin-top:4px; }
+		.menu:hover {transform:scale(1.5);}
+		.menu{font-family:"Times new Roman"; color:#666464; font-size:15pt; padding-left:10px;}
+		
+		header>div>nav{ flex:0.6;   background:rgba(255,255,255,0.3);  border-radius:35px;  margin-top:4px; display:none; padding:7px 10px; text-shadow:2px 2px 4px rgba(0,0,0,0.7); margin-left:-70px;}
+		header nav>div{display:flex; justify-content:space-around; align-items:center;}
+		header nav a{font-family:"Times new Roman"; font-size:13pt;  padding-right:10px; letter-spacing:0.05em;}
+				
+		
+		header>div>h3{flex:1; text-align:right; margin-right:20px; margin-top:4px;} 
+		header>div>h3 a{font-family:"Times new Roman"; color:#666464; font-size:15pt; padding-left:10px;}
+		header>img{display:inline-block; padding:20px 45px 0 50px; }
+		header>img:last-child {margin-left:30px;}
+		
+		main	{padding:20px 50px;}
+	
+		#actor{position:absolute; display:flex;  }
+		#actor section{padding:19px; line-height:17pt; margin-right:5px; flex:1; color:#21221c;}
+		section>h3{display:none;}
+		section>p{font-size:14pt; /* border:1px solid red;*/ }
+	
+		section h5  {font-size:13pt; margin-top:10px;  padding-bottom:10px;}
+		section h6{font-size:13pt; padding-bottom:10px;}
+		#movie {padding:0px 80px 40px 80px; margin-left:150px; }
+		#movie img{display:block; border:6px outset white;  border-radius:10px; box-shadow:4px 4px 6px rgba(0,0,0,0.6); width:1000px;}
+		
+		.left{position:absolute; left:25px; top:450px;}
+
+		
+		</style>
+		
+		
+	</head>
+	<body>
+		<div id="layout">
+			<header>
+				<div>
+					<h1>감독 및 배우 소개</h1>
+					<h2><i  class="menu"> Menu</i></h2>
+					<nav>
+						<div>
+						<a href="menu.html" style="color:#ddd;">Menu</a>
+						<a href="about.html">About</a>
+						<a href="ost.html">Ost</a>
+						<a href="background.html">Background</a>
+						<a href="tour.html">Tour</a>
+						<a href="contents.html">Contents</a>
+						</div>
+					</nav>
+					<h3><i><a href="index.html">Home</a></i></h2>
+				</div>
+				<img src="images/about_title2.png" alt="영화소개"><br>
+				
+			</header>
+			<main>
+				<div id="movie"><img src="images/about3_movie.jpg" alt="폰트랩과 엘자"></div>
+				
+				<div id="actor">
+					<section>
+					
+						<h3>등장인물</h3>
+						
+						<b>크리스토퍼 플러머 Christopher Plummer</b><br>
+						<h6>캡틴 조지 본트랩 역</h6>
+						<p>1929년 12월 13일 ~ 2021년 2월 5일 / 캐나다, 토론토라스트</p>
+						<h5><b>다른 작품</b></h5>
+						<p>사운드 오브 뮤직(1965), 드라그넷(1987), 풀메저(2019), 나이브스아웃(2019), 바운더리스(2018)</p>
+					</section>
+					<section>
+					
+						<b>엘레노 파커 Eleano Parker </b><br>
+						<h6>남작부인 역</h6>
+						<p>1922년 6월 26일 ~ 2013년 12월 9일 / 미국<br>
+						</p>
+						<h5><b>다른 작품</b></h5>
+						<p>사운드 오브 뮤직(1965), 욕망의 덫(1991), 마담X(1981), 쉬즈 드레스트 투킬(1979)</p>
+					</section>
+					<section>
+						<b>리처드 헤이든 Richard Haydn</b><br>
+						<h6>맥스 역</h6>
+						<p>영 프랑켄슈타인(1974) 사운드 오브 뮤직(1965), 풍선기구의 5주(1962)</p><br>
+						<b>페기 우드 Peggy Wood</b><br>
+						<h6>마더 역</h6>
+						<p>원라이프투리브(1968),사운드오브뮤직(1965),룻이야기(1960)</p><br>
+						<b>안나 리 Anna Lee</b><br>
+						<h6>마가레타 수녀 역</h6>
+						<p>원 라이프 투 리브(1968), 사운드 오브 뮤직(1965), 룻 이야기(1960)</p><br>
+					</section>
+					
+				</div>
+				
+				
+			</main>
+				<a href="about2.html" class="left"><img src="images/left.png" alt="왼쪽버튼"></a>
+			
+			
+	
+		</div>
+	</body>
+
+</html>
