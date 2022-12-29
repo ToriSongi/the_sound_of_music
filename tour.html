@@ -19,17 +19,28 @@
 				$("header>div>nav").fadeOut();
 			});
 			
+			$("#gogotour p").mouseenter(function(){
+				const idx=$(this).index();
+				$("#cursor img").eq(idx).css({"transform":"scale(1.4) translateY(-5px)", "z-index":2 }).siblings().css({"filter":"grayscale(60%)  opacity(0.4)", "z-index":1  });
+				$("#txt img").eq(idx).fadeIn();
+			});
+			
+			$("#gogotour p").mouseleave(function(){
+				$("#cursor img").css({"transform":"scale(1) translateY(0px)"}).siblings().css({"filter":"grayscale(0%)  opacity(1)"});
+				$("#txt img").fadeOut();
+			});
 			
 			
 			});
 		</script>
 		<style>
 		* {margin:0; padding:0; box-sizing:border-box;}
-		html, body{font:12pt/120% "나눔바른고딕", sans-serif; color:white; line-height:21pt;  }
+		html{scroll-behavior:smooth;}
+		html, body{font:12pt/120% 'Nanum Gothic', sans-serif; color:white; line-height:21pt;  }
 		img{max-width:100%;}
 		a{text-decoration:none; color:white;}
 		
-		#layout	{width:1600px; height:1040px; margin:auto; position:relative; background:url("images/tour-bg.jpg")no-repeat center/cover;}
+		#layout	{width:1600px; height:1040px; margin:auto; position:relative; background:url("images/tour-bg1.jpg")no-repeat center/cover;}
 		header h1{display:none;}
 		header>div	{display:flex;  padding:5px 20px; height:55px;}
 		header>div>h2	{flex:0.1; margin-right:10px;  margin-top:4px; }
@@ -48,19 +59,123 @@
 		
 		
 		
-		main	{display:flex; padding:20px 90px;}
-		main section{background: rgba(255,255,255,0.7); padding:40px 140px; /*border-bottom:5px solid black;  border-right:5px solid black;*/ border-radius:30px;}
-		section h3{font-size:25pt; /*text-shadow:2px 2px 4px rgba(0,0,0,0.6);*/ color:#f83507;}
+		main	{display:flex; padding:20px 70px; position:relative;}
+		main section{ padding:40px 80px; border-radius:30px;}
+		main section h3{font-size:25pt; /*text-shadow:2px 2px 4px rgba(0,0,0,0.6);*/ color:#f83507;}
+		main section h3>img{width:680px;}
+		main section>p{font-size:13pt; /*font-style:italic;*/ padding:10px 60px; background: rgba(255,255,255,0.7);  color:#0e0e0e; border-radius:20px; border:4px ridge #b28d3f; font-weight:600; text-align:center; margin-bottom:20px;}
+		
+		main section a{line-height:180%; font-family: 'Sevillana', sans-serif;  font-size:15pt; font-style:italic; color:tomato; font-weight:bold; text-shadow:2px 2px 3px rgba(0,0,0,0.9);}
+		
+		#gogotour{position:relative;}
+		#gogotour p{transition:0.6s; border:0px solid red;  margin-left:50px;}
+		#gogotour p:hover{margin-left:160px;} 
+		#gogotour p>img {width:500px;}
+		#gogotour a>img { margin-left:-40px; transform:translateY(-7px); border:0px solid red; display:inline-block;}
+		
+		#cursor {}
+		#cursor img{position:absolute; width:45px;}
+		
+		#cursor img:nth-child(1){top:472px; left:1152px;} 
+		#cursor img:nth-child(2){top:519px; left:1147px; z-index:1;}
+		#cursor img:nth-child(3){top:510px; left:1179px; } 
+		#cursor img:nth-child(4){top:503px; left:1188px; z-index:1;}
+		#cursor img:nth-child(5){top:470px; left:1220px;}/*생길겐*/
+		#cursor img:nth-child(6){top:520px; left:1224px;} /*몬드제*/
+		#cursor img:nth-child(7){top:478px; left:1148px;}
+		
+		#txt {/*display:none;*/}
+		#txt img{position:absolute; width:370px; display:none;}
+		
+		#txt img:nth-child(1){top:337px; left:992px;} /*-140 -160 */
+		#txt img:nth-child(2){top:384px; left:997px;}
+		#txt img:nth-child(3){top:375px; left:1019px; } /*헬브룬*/
+		#txt img:nth-child(4){top:368px; left:1028px;} /*수녀원*/
+		#txt img:nth-child(5){top:335px; left:1060px;}/*생길겐*/
+		#txt img:nth-child(6){top:385px; left:1064px;} /*몬드제*/
+		#txt img:nth-child(7){top:343px; left:988px;}
 	
-		section p{color:#21221c;}
-		section b{font-size:18pt; font-style:italic;}
-		section a{line-height:180%; font-family: 'Sevillana', sans-serif;  font-size:15pt; font-style:italic; color:tomato; font-weight:bold; text-shadow:2px 2px 3px rgba(0,0,0,0.9);}
-		section a img {width:510px;}
-		section a{transition:0.6s;}
-		section a:hover{margin-left:60px;} 
 		.right{position:absolute; right:15px; top:46%; z-index:1;}
+		
+		/*첫번째 투어*/
+		#tour1{ width:1600px; padding:170px 50px 150px 50px; margin:auto;  letter-spacing:0.05em; /*margin:120px 0;*/ border-bottom:3px dashed #eee;}
+		
+		#intro1{display:flex;  padding:50px 80px; */background:url("images/flower-bg.png")no-repeat left bottom/contain;*/ }
+		#intro1 section{color:#0e0e0e; flex:1.5;}
+		#intro1 section a{color:#0e0e0e;}
+		#intro1 section>a:hover{text-decoration:underline;}
+		#intro1 section img{border:6px ridge #ebb444; border-radius:50px; display:block; margin-top:30px; margin-left:30px;}
+		iframe{flex:1; box-shadow:2px 2px 4px rgba(0,0,0,0.5);}
+			
+			
+			/*두번째 투어*/
+		#tour2{ width:1600px; padding:170px 50px 150px 50px; margin:auto;  letter-spacing:0.05em;  border-bottom:3px dashed #eee; }
+		
+		#intro2{display:flex; padding:50px 80px; }
+		#intro2 section{color:#0e0e0e; flex:1.5; padding-right:70px;}
+		#intro2 section a{color:#0e0e0e;}
+		#intro2 section>a:hover{text-decoration:underline;}
+		#intro2 section img{border:6px ridge #ebb444; border-radius:50px; display:block; margin-top:30px; margin-left:30px;}
+		iframe{flex:1; box-shadow:2px 2px 4px rgba(0,0,0,0.5);}
+		
+		/*세번째 투어*/
+		#tour3{ width:1600px; padding:170px 50px 150px 50px; margin:auto;  letter-spacing:0.05em;  border-bottom:3px dashed #eee; }
+		
+		#intro3{display:flex; padding:50px 80px; }
+		#intro3 section{color:#0e0e0e; flex:1.5; padding-right:70px;}
+		#intro3 section a{color:#0e0e0e;}
+		#intro3 section>a:hover{text-decoration:underline;}
+		#intro3 section img{border:6px ridge #ebb444; border-radius:50px; display:block; margin-top:30px; margin-left:30px;}
+		iframe{flex:1; box-shadow:2px 2px 4px rgba(0,0,0,0.5);}
+		
+		/*네번째 투어*/
+		#tour4{ width:1600px; padding:170px 50px 150px 50px; margin:auto;  letter-spacing:0.05em;  border-bottom:3px dashed #eee; }
+		
+		#intro4{display:flex; padding:50px 80px; }
+		#intro4 section{color:#0e0e0e; flex:1.5; padding-right:70px;}
+		#intro4 section a{color:#0e0e0e;}
+		#intro4 section>a:hover{text-decoration:underline;}
+		#intro4 section img{border:6px ridge #ebb444; border-radius:50px; display:block; margin-top:30px; margin-left:30px;}
+		iframe{flex:1; box-shadow:2px 2px 4px rgba(0,0,0,0.5);}
+		
+		/*다섯번째 투어*/
+		#tour5{ width:1600px; padding:170px 50px 150px 50px; margin:auto;  letter-spacing:0.05em;  border-bottom:3px dashed #eee; }
+		
+		#intro5{display:flex; padding:50px 80px; }
+		#intro5 section{color:#0e0e0e; flex:1.5; padding-right:70px;}
+		#intro5 section a{color:#0e0e0e;}
+		#intro5 section>a:hover{text-decoration:underline;}
+		#intro5 section img{border:6px ridge #ebb444; border-radius:50px; display:block; margin-top:30px; margin-left:30px;}
+		iframe{flex:1; box-shadow:2px 2px 4px rgba(0,0,0,0.5);}
+		
+		
+		/*여섯번째 투어*/
+		#tour6{ width:1600px; padding:170px 50px 150px 50px; margin:auto;  letter-spacing:0.05em;  border-bottom:3px dashed #eee; }
+		
+		#intro6{display:flex; padding:50px 80px; }
+		#intro6 section{color:#0e0e0e; flex:1.5; padding-right:70px;}
+		#intro6 section a{color:#0e0e0e;}
+		#intro6 section>a:hover{text-decoration:underline;}
+		#intro6 section img{border:6px ridge #ebb444; border-radius:50px; display:block; margin-top:30px; margin-left:30px;}
+		iframe{flex:1; box-shadow:2px 2px 4px rgba(0,0,0,0.5);}
+		
+		/*일곱번째 투어*/
+		#tour7{ width:1600px; padding:170px 50px 150px 50px; margin:auto;  letter-spacing:0.05em;  border-bottom:3px dashed #eee; }
+		
+		#intro7{display:flex; padding:50px 80px; }
+		#intro7 section{color:#0e0e0e; flex:1.5; padding-right:70px;}
+		#intro7 section a{color:#0e0e0e;}
+		#intro7 section>a:hover{text-decoration:underline;}
+		#intro7 section img{border:6px ridge #ebb444; border-radius:50px; display:block; margin-top:30px; margin-left:30px;}
+		iframe{flex:1; box-shadow:2px 2px 4px rgba(0,0,0,0.5);}
+		
+		
+		#toTop{height:60px; width:60px; background:#3790d4; padding:0px 10px 10px 10px; border-radius:50%; position:fixed; right:55px; bottom:15px; line-height:130%;opacity:0.8;}
+		#toTop p{text-align:center; color:white; font-size:1.1rem;}
+		
 		</style>
 		
+
 		
 	</head>
 	<body>
@@ -84,27 +199,192 @@
 			<main>
 				
 				<section>
-					<h3>&quot;사운드 오브 뮤직 영화 촬영지 여행하기&quot;</h3><br>
-					<p>
-						<b>사운드 오브 뮤직의 촬영지인 짤츠부르크 일대를 돌아보세요!</b><br><br>
-						
-						그림같은 아름다운 풍경과 사운드 오브 뮤직의 음악, <br> 그리고 영화의 장면을 떠올리며 멋진 추억을 만드시길 바랍니다.
-
-					</p><br>
-					<a href="tour1.html"><img src="images/gotour1.png" alt="미라벨정원가기"></a><br>
-					<a href="tour2.html"><img src="images/gotour2.png" alt="호텔슐로스가기"></a><br>
-					<a href="tour3.html"><img src="images/gotour3.png" alt="헬브룬궁전가기"></a><br>
-					<a href="tour4.html"><img src="images/gotour4.png" alt="생길겐가기"></a><br>
-					<a href="tour5.html"><img src="images/gotour5.png" alt="수녀원가기"></a><br>
-					<a href="tour6.html"><img src="images/gotour6.png" alt="몬드제성당가기"></a><br>
-					<a href="tour7.html"><img src="images/gotour7.png" alt="버스투어가기"></a>
+					<h3><img src="images/tour_h3.png"></h3><br>
+					
+						<p>사운드 오브 뮤직의 촬영지인 짤츠부르크 일대를 돌아보세요! <br>
+						그림같은 아름다운 풍경과 사운드 오브 뮤직의 음악,<br>
+						그리고 영화의 장면을 떠올리며 멋진 추억을 만드시길 바랍니다.</p>
+					<br>
+					<div id="gogotour">
+						<p><img src="images/gotour1.png" alt="미라벨정원가기"><a href="#tour1"><img src="images/cursor.png" alt="미라벨정원가기 화살표" class="cs1"></a></p>
+						<p><img src="images/gotour2.png" alt="호텔슐로스가기"><a href="#tour2"><img src="images/cursor.png" alt="미라벨정원가기 화살표" class="cs2"></a></p>
+						<p><img src="images/gotour3.png" alt="헬브룬궁전가기"><a href="#tour3"><img src="images/cursor.png" alt="미라벨정원가기 화살표" class="cs3"></a></p>
+						<p><img src="images/gotour4.png" alt="수녀원가기"><a href="#tour4"><img src="images/cursor.png" alt="미라벨정원가기 화살표" class="cs4"></a></p>
+						<p><img src="images/gotour5.png" alt="생길겐가기"><a href="#tour5"><img src="images/cursor.png" alt="미라벨정원가기 화살표" class="cs5"></a></p>
+						<p><img src="images/gotour6.png" alt="몬드제성당가기"><a href="#tour6"><img src="images/cursor.png" alt="미라벨정원가기 화살표" class="cs6"></a></p>
+						<p><img src="images/gotour7.png" alt="버스투어가기"><a href="#tour7"><img src="images/cursor.png" alt="미라벨정원가기 화살표" class="cs7"></a></p>
+					</div>
+					<div id="cursor">
+						<img src="images/pointer.png" alt="위치 포인터">
+						<img src="images/pointer.png" alt="위치 포인터">
+						<img src="images/pointer.png" alt="위치 포인터">
+						<img src="images/pointer.png" alt="위치 포인터">
+						<img src="images/pointer.png" alt="위치 포인터">
+						<img src="images/pointer.png" alt="위치 포인터">
+						<img src="images/pointer.png" alt="위치 포인터">
+					</div>
+					<div id="txt">
+						<img src="images/txt1.png" alt="말풍선1">
+						<img src="images/txt2.png" alt="말풍선2">
+						<img src="images/txt3.png" alt="말풍선3">
+						<img src="images/txt4.png" alt="말풍선4">
+						<img src="images/txt5.png" alt="말풍선5">
+						<img src="images/txt6.png" alt="말풍선6">
+						<img src="images/txt7.png" alt="말풍선7">
+					
+					</div>
 				</section>
 				
 			</main>
-		
-			
-		<a href="tour1.html"  class="right"><img src="images/right.png" alt="오른쪽버튼" ></a>
 		</div>
+		<div id="tour1">
+			<img src="images/tour1-1.jpg" alt="미라벨정원"><br>
+			<div id="intro1">
+				<section>
+					<h3>미라벨정원 Mirabell garten</h3><br>
+					<p>
+					주소: Mirabellplatz 3, 5020 Salzburg, Austria.<br>
+					입장료: 무료<br><br>
+
+					유명한 ‘도레미 송’의 촬영지<br><br>
+
+					오스트리아 잘츠부르크의 정원<br>
+					미라벨궁 정면에 있는 푸르른 정원으로 우아한 경치, 오솔길, 꽃 풍경을 즐길 수 있습니다.
+					</p><br>
+					<a href="https://www.stadt-salzburg.at/mirabellgarten/" target="_blank"><i>https://www.stadt-salzburg.at/mirabellgarten/</i></a>
+					<img src="images/trip1-1.jpg" alt="영화미라벨정원"><br>
+				</section>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2679.80640729635!2d13.040121615826044!3d47.804588382272684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47769064cc2367c5%3A0x49f976a9ca845537!2z66-4652867KoIOygleybkA!5e0!3m2!1sko!2skr!4v1669099175172!5m2!1sko!2skr" width="250" height="600" style="border-radius:10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>	
+				</div>	
+		</div>
+		
+		<div id="tour2">
+			<img src="images/tour2-1.jpg" alt="호텔 슐로스"><br>
+			<div id="intro2">
+				<section>
+					<h3>호텔 슐로스 레오폴드스크론 Hotel Schloss Leopoldskron </h3><br>
+					<p>
+					주소: Leopoldskronstraße 56-58, 5020 Salzburg, Austria.<br>
+					입장료: 무료<br><br>
+
+					영화 속 대령과 일곱 아이들이 살고 있는 대저택이며, 영화에서 마리아가 아이들과 보트를 타다 폰트랩 대령을 보고 반가워 손을 흔들다 물에 빠지는 장면에 나오는 곳 입니다.<br><br>
+
+					이 궁전은 1947년부터 잘츠부르크 국제 세미나의 본거지 였습니다. <br>2014년에는 궁전과 인근 마이에호프 건물이 개인 소유의 호텔인 슐로스 레오폴드스크론 호텔로 개관하였다.<br>
+					</p><br>
+					<a href="https://www.schloss-leopoldskron.com/" target="_blank"><i>https://www.schloss-leopoldskron.com/</i></a>
+					<img src="images/trip2-1.jpg" alt="영화 레오폴드스크론">
+				</section>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2680.6474481913347!2d13.03673501582549!3d47.78828388340233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47769059123b4261%3A0xda509729e9c0cb1f!2z7Zi47YWUIOyKkOuhnOyKpCDroIjsmKTtj7Trk5zsiqTtgazroaA!5e0!3m2!1sko!2skr!4v1669101584284!5m2!1sko!2skr"  width="250" height="600" style="border-radius:10px;"allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>	
+			</div>	
+		</div>
+		
+		<div id="tour3">
+			<img src="images/tour3-1.jpg" alt="헬브룬 궁전"><br>
+			<div id="intro3">
+				<section>
+					<h3>헬브룬 궁전 Schloss Hellbrunn  </h3><br>
+					<p>
+					주소: Fürstenweg 37, 5020 Salzburg, Austria.<br>
+					입장료:12.5유로 (물의 정원 가이드투어 포함)<br>잘츠부르크 카드로도 무료 입장가능<br><br>
+
+					마리아와 폰트랩 대령이 서로의 감정을 알지 못하다가 사랑의 감정을 깨달으며 키스를 나누는 로맨틱한 장면이 촬영된 곳입니다. <br><br>헬브룬 궁전은 오스트리아 잘츠부르크의 남쪽 지역인 모르츠(Morzg) 근처에 있는 궁전 같은 규모의 초기 바로크 양식의 빌라입니다.<br>
+					</p><br>
+					<a href="https://www.hellbrunn.at/" target="_blank"><i>https://www.hellbrunn.at/</i></a>
+					<img src="images/trip3-1.jpg" alt="영화 헬브룬 궁전">
+				</section>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2682.0077110649304!2d13.060909165824901!3d47.76190478522944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4776913d32c59235%3A0x99e7b04ff29c0ed7!2z7Zes67iM66OsIOq2geyghA!5e0!3m2!1sko!2skr!4v1669102318858!5m2!1sko!2skr"  width="250" height="600" style="border-radius:10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>	
+		</div>
+		
+		<div id="tour4">
+			<img src="images/tour4-1.jpg" alt="논베르그 수녀원"><br>
+			<div id="intro4">
+				<section>
+					<h3>논베르크 수녀원 Stift Nonnberg  </h3><br>
+					<p>
+					주소: Nonnberggasse 2, 5020 Salzburg, Austria.<br><br>
+					말썽꾸러기 견습 수녀인 마리아가 폰트랩 대령의 집으로 가정교사로 들어가기 전 지내던 수녀원입니다.<br>
+					나치에게 쫓기는 도중 수녀님들이 마리아와 대령의 가족들을 숨겨주는 곳이기도 합니다.<br><br>
+					
+					1009년에 축성된 수녀원 교회로 지하실과 12세기 프레스코화가 있으며, 로마 카톨릭 의식이 거행됩니다.<br>
+					</p><br>
+					<a href="http://www.benediktinerinnen.de/" target="_blank"><i>http://www.benediktinerinnen.de/</i></a>
+					<img src="images/trip4-1.jpg" alt="영화 논베르그 수녀원">
+				</section>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2680.24379421839!2d13.048640615825786!3d47.796109682860205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4776908ba0ddf301%3A0x2031bfb58ba489f!2sStift%20Nonnberg!5e0!3m2!1sko!2skr!4v1669103892059!5m2!1sko!2skr"  width="250" height="600" style="border-radius:10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>	
+		</div>
+		
+		<div id="tour5">
+			<img src="images/tour5-1.jpg" alt="생길겐"><br>
+			<div id="intro5">
+				<section>
+					<h3>잘츠캄머굿의 생길겐 마을과 볼프강 호수 Sankt Gilgen </h3><br>
+					<p>
+					주소: Nonnberggasse 2, 5020 Salzburg, Austria.<br><br>
+					마리아는 집 안에서만 생활하는 아이들을 안타깝게 여겨 몰래 피크닉을 떠나는데 그 장면이 촬영된 곳입니다.<br><br>
+					생길겐(장크트길겐)은 오스트리아 잘츠부르크주에 위치한 도시로 면적은 98.67km², 높이는 545m, 인구는 3,850명, 인구 밀도는 39명/km²이다. 잘츠카머구트 지대에 위치한다. <br>1376년 문헌에 처음으로 등장했으며 1893년에는 잘츠카머구트를 경유하는 철도 노선이 건설되었다.<br><br>
+					오스트리아의 거장 모짜르트는 짤츠부르크에서 태어났지만 그의 엄마가 살던 외갓집, 그리고 그의 누나가 태어난 곳은 바로 
+					아름다운 호수마을 잘츠감머굿의 생길겐이다.<br><br>
+
+					</p><br>
+					<img src="images/trip5-1.jpg" alt="영화 생길겐">
+				</section>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5362.9534340024165!2d13.35262932841419!3d47.7722034774296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4776bad9e17271d1%3A0xa99c6ddadae57c7a!2z7Jik7Iqk7Yq466as7JWEIDUzNDAg7J6l7YGs7Yq46ri46rKQ!5e0!3m2!1sko!2skr!4v1669104114519!5m2!1sko!2skr"  width="250" height="600" style="border-radius:10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>	
+		</div>
+		
+		<div id="tour6">
+			<img src="images/tour6-1.jpg" alt="몬드제 성당"><br>
+			<div id="intro6">
+				<section>
+					<h3>몬드제 성당 Mondsee Basilica Minor St. Michael </h3><br>
+					<p>
+					주소: Josef-Bunk-Straße 6, 5310 Mondsee,  Austria.<br>
+					입장료: 무료<br><br>
+
+					자신의 마음을 깨닫고 약혼녀와 파혼 후 마리아와 결혼을 하는데, 대령과 마리아의 결혼식이 촬영된 곳 입니다.<br><br>
+
+					'성미카엘 대성당(St. Michael Cathedral)'이라고도 합니다. 748년 로마인 주거유적지에 세워졌으며 몇백 년간 잘츠카머구트(Salzkammergut) 지방의 문화에 중요한 영향을 미쳤습니다. 원래 이곳에 있던 수도원은 1792년 없어졌습니다. <br>
+
+					가장 오래된 독일어 성경 번역본인 〈몬드제 마태(Mondsee Matthew)〉의 작업이 이곳에서 이루어졌습니다.<br>
+
+					</p><br>
+					<a href="https://www.dioezese-linz.at/mondsee" target="_blank"><i>https://www.dioezese-linz.at/mondsee</i></a>
+						<img src="images/trip6-1.jpg" alt="영화 몬드제 성당">
+				</section>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2677.1478558713006!2d13.349030315827308!3d47.856099678701916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4776a4017c4f6125%3A0x441e7a7fa8645bd1!2sBasilika%20St.%20Michael!5e0!3m2!1sko!2skr!4v1669105009355!5m2!1sko!2skr"  width="250" height="600" style="border-radius:10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>	
+		</div>
+		
+		<div id="tour7">
+			<img src="images/tour7-1.jpg" alt="투어버스"><br>
+			<div id="intro7">
+			<section>
+				<h3>사운드 오브 뮤직 투어 Sound of Music Tour</h3><br>
+				<p>
+				
+				영화의 주요 촬영장소를 관람하는 투어로 그 동안의 여행과는 달리 버스를 타고 편안하게 근교의 짤츠캄머구트까지 갈 수 있어 한 번 해볼 만합니다.<br> 폰트랩 대령의 집, 영화 속 리슬과 롤프가 'I am 16 going on 17'을 불렀던 'summer house', 폰트랩과 마리아가 결혼식을 올렸던 'Mondsee'의 교회, 미라벨 정원 등을 둘러보는 것이 주요 코스입니다.<br> 
+				여행 전에 영화를 보고 가거나 돌아와서 본다면 감회가 새로울 것입니다. 가이드는 영어로만 진행되며 투어 내내 사운드 오브 뮤직의 영화음악이 흘러 나오고 가이드도 무척 재미있게 진행합니다.<br><br>
+
+				 투어시간 : 09:15, 14:00(하루 두 차례 출발, 약 4시간 소요)<br>
+
+				요금:  € 50.00(미라벨 정원 앞에서 출발하고, 예약 역시 미라벨 정원 앞 광장에 있는 파노라마 투어 티켓판매소에서 하면 된다.)<br>
+
+				</p><br>
+				<a href="www.panoramatours.com" target="_blank"><i> www.panoramatours.com</i></a>
+				<img src="images/trip7-1.jpg" alt="투어버스"><br>
+				</section>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2680.24379421839!2d13.048640615825786!3d47.796109682860205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4776908ba0ddf301%3A0x2031bfb58ba489f!2sStift%20Nonnberg!5e0!3m2!1sko!2skr!4v1669103892059!5m2!1sko!2skr"  width="250" height="600" style="border-radius:10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>	
+		</div>
+		
+		
+		
+		<a href="#layout" id="toTop">
+					<p>_</p>
+					<p>↑</p>
+				</a>
 	</body>
 
 </html>

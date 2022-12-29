@@ -39,7 +39,9 @@
 		</script>
 		<style>
 		* {margin:0; padding:0; box-sizing:border-box;}
-		html, body{font:15pt/120% "나눔바른고딕", sans-serif; color:white;  /*letter-spacing:0.1em;*/ }
+		
+		html, body{font:15pt/120% 'Nanum Gothic', sans-serif; color:white;  }
+		html{scroll-behavior:smooth;}
 		img{max-width:100%;}
 		a{text-decoration:none; color:white;}
 		
@@ -86,10 +88,54 @@
 		.showup>section{  background:url("images/elegance1.png")no-repeat center/cover; position:absolute; top:300px; left:380px; z-index:1; width:850px; height:650px; padding:210px 130px 150px 130px; font-family: 'Nanum Gothic', sans-serif; color:white;}
 		.showup>section h4{text-shadow:2px 2px 4px rgba(0,0,0,0.7);}
 		.showup>section>img {float:right; margin:0 20px; box-shadow:3px 3px 5px rgba(0,0,0,0.7); border:5px ridge #ebb444;}
-		.showup>section p{font-size:13pt; line-height:160%; color:#0e0e0e; font-weight:600; text-shadow:0px 0px 5px rgba(255,255,255,1);}
+		.showup>section p{font-size:13pt; line-height:160%; color:#0e0e0e; font-weight:600; text-shadow:0px 0px 4px white;}
 		.showup>section a{font-size:20pt; font-weight:900; text-align:right; display:block; margin-top:10px; font-family: 'Dancing Script', cursive; color:#ebb444; text-shadow:0px 0px 5px rgba(0,0,0,1); margin-top:-10px;}
 		
 		.right{position:absolute; right:25px; top:450px; z-index:1;}
+		
+		
+		#wrapper{width:1600px; margin:auto; background:url("images/wall.png"); margin-top:-120px;}
+		/*첫번째 소개*/
+		#about1{ width:1600px; padding:170px 50px 90px 50px; display:flex; margin:auto;  letter-spacing:0.05em; margin:120px 0;}
+	
+		#info{flex:2; margin-right:40px; padding:0 20px;}
+		#info section{padding:20px; line-height:20pt; }
+		#info section:not(:first-child){border-top:1px dashed #ddd;}
+		#info section>h3{padding-bottom:10px;  color:#0e0e0e;}
+		#info section>p{font-size:12pt; text-align:justify; color:#21221c;}
+		#director1>img {float:left; margin-right:20px;}
+		#director1>p>b(:first-of-type) {font-size:20pt; }
+		#movie1 {flex:1.2;  }
+		#movie1 img { border:6px ridge #ebb444; border-radius:50%; box-shadow:4px 4px 6px rgba(0,0,0,0.6);}
+		
+		
+		/*두번째 소개*/
+		#about2{ width:1600px; padding:90px 50px; display:flex; margin:auto;  letter-spacing:0.05em; margin:120px 0;}
+		#actor2{flex:2; margin-top:-30px;}
+		#actor2 section{padding:20px; line-height:20pt; margin-right:35px;  color:#21221c; }
+		#actor2 section>h3{padding-bottom:20px;  color:#0e0e0e;}
+		#actor2 section>p{font-size:12pt; text-align:justify; color:#21221c;}
+		#actor2 section>img {float:right; margin-right:20px;}
+		#actor2 section h6  {font-size:13pt; }
+		#movie2 {flex:1.2; padding:40px 30px; }
+		#movie2 img { border:6px ridge #ebb444; border-radius:50%; box-shadow:4px 4px 6px rgba(0,0,0,0.6);}
+		
+		/*세번째 소개*/
+		#about3{ width:1600px; padding:90px 50px;  margin:auto;  letter-spacing:0.05em; margin:120px 0;}
+		#actor3{ display:flex;  padding:0 20px;}
+		#actor3 section{padding:19px; line-height:17pt; margin-right:5px; flex:1; color:#21221c;}
+		#actor3 section>h3{display:none;}
+		#actor3 section>p{font-size:12pt; /* border:1px solid red;*/ }
+	
+		#actor3 section h5  {font-size:13pt; margin-top:10px;  padding-bottom:10px;}
+		#actor3 section h6{font-size:13pt; padding-bottom:10px;}
+		#movie3 {padding:0px 80px 80px 80px; margin-left:150px; }
+		#movie3 img{display:block; border:6px ridge #ebb444; border-radius:50px;  box-shadow:4px 4px 6px rgba(0,0,0,0.6); width:1000px;}
+		
+		#toTop{height:60px; width:60px; background:#3790d4; padding:0px 10px 10px 10px; border-radius:50%; position:fixed; right:55px; bottom:15px; line-height:130%;opacity:0.8;}
+		#toTop p{text-align:center; color:white; font-size:1.1rem;}
+		
+		.bord{display:block; margin:auto; width:1100px;}
 		
 		</style>
 		
@@ -155,7 +201,7 @@
 							<img src="images/about_actor1.jpg" alt="마리아역 사진">
 							<h4>줄리 앤드류스 Julie Andrews</h4><br> 
 							<p>마리아 역 <br> <br> 수녀원 견습 수녀.<br> 노래를 좋아하는 말괄량이 수녀다. <br>  원장수녀의 권유로 폰트랩대령 저택 일곱 아이들의 가정교사로 들어가게 되는데....</p>
-							<a href="about2.html">More +</a>
+							<a href="#about2">More +</a>
 						</section>
 				</div>
 				<div class="showup">
@@ -163,7 +209,7 @@
 							<img src="images/about_actor2.jpg" alt="본트랩 역  사진">
 							<h4>크리스토퍼 플러머 <br>Christopher Plummer</h4><br> 
 							<p>캡틴 조지 본트랩 역 <br> <br> 고집 세고 뼛속까지 군인 정신이 박힌 사람.<br> 애국심이 강하며, 자신의 가정을 이끄는 방식에 대해서도 확고한 신념이 있다. <br> 퇴역한 해군 장교 출신으로 전장에서 세운 공이 꽤 크다.  </p>
-							<a href="about3.html">More +</a>
+							<a href="#about3">More +</a>
 						</section>
 				</div>
 				<div class="showup">
@@ -172,7 +218,7 @@
 							<h4>엘레노 파커 Eleano Parker</h4><br> 
 							<p>남작부인 역 <br> <br> 대령은 그녀를 '엘자'라고 부르고 있다.  <br>마리아나 아이들은 보통 남작 부인(Baroness)으로 부른다. <br>
 									비엔나에 거주하는 미모의 부유한 과부이다. 똑같이 배우자를 잃은 처지의 대령과 서로 깊은 감정을 품고 있다. </p>
-									<a href="about3.html">More +</a>
+									<a href="#about3">More +</a>
 						</section>
 				</div>
 				<div class="showup">
@@ -180,16 +226,115 @@
 							<img src="images/about_director.jpg" alt="감독 사진">
 							<h4>로버트 와이즈 Robert Earl Wise</h4><br> 
 							<p>감독<br> <br> 첫 연출작은 캣 피플의 저주인데 이 작품도 호러 영화의 고전 중 하나로 꼽힌다. SF 영화계의 고전 중 하나인 『지구가 멈추는 날』도 연출하였고, 그의 경력 중 가장 중요한 작품은 역시 두 뮤지컬 영화인 『웨스트 사이드 스토리』와 『사운드 오브 뮤직』일 것이다.</p>
-							<a href="about1.html">More +</a>
+							<a href="#about1">More +</a>
 						</section>
 				</div>
 			
 			</main>
-		
-			<a href="about1.html"  class="right"><img src="images/right.png" alt="오른쪽버튼" ></a>
-			
 	
 		</div>
+		<div id="wrapper">
+		<div id="about1">
+			<div id="info">
+						<section>
+							<h3>기획의도</h3>
+							<p>그래픽의 발달로 CG가 가미된 화려한 블럭버스터 영화와 많은 영화효과로 제작된 대작이 넘쳐나고 있습니다.<br>
+							하지만 이 영화는 그런 기술이 많이 들어간 영화는 아니지만, 그림같은 알프스의 배경과 아름다운 하모니와 멜로디를 감상할 수 있는 뮤지컬 영화의 고전 중 하나 입니다.<br>
+							오래된 영화라 화면이 낡고 선명하진 않지만 최신 멋진 영화 속에 이 같은 정서와 따뜻함을 느끼게 한 영화가 있을까 하는 의미로 다시 들여다 보며 그 감성을 다시 느끼고자 시작 하였습니다.
+							</p>
+						</section>
+						<section>
+							<h3>줄거리</h3>
+							<p>음악을 사랑하는 말괄량이 견습수녀 ‘마리아’는 원장수녀의 권유로 해군명문 집안 폰트랩가의 가정교사가 된다.<br>
+							‘마리아’는 좀처럼 엄마를 잃고 마음의 문을 열지 않는 폰트랩 가의 일곱 아이들에게 노래를 가르치며 점차 교감하며 가까워지게 되고, 엄격한 ‘폰트랩 대령’ 역시 마음의 문을 열게 된다.<br>
+							그러던 어느날, ‘마리아’는 자신이 ‘폰트랩 대령’을 사랑하고 있다는 사실을 깨닫게 되고, 자신만의 비밀을 간직한 채 아이들의 곁을 떠나 다시 수녀원에 들어가기로 결심 하는데...
+							</p>
+						</section>
+						<section id="director1">
+							<h3>감독</h3>
+							<img src="images/about_director.jpg" alt="로버트 와이즈">
+							<p><b>로버트 와이즈 Robert Wise</b><br><br>
+								<b>다른 작품</b><br>
+								발 류튼: 그림자 속의 사나이 Val Lewton: The Man In The Shadows, 2007<br>
+								스톰 인 썸머 A Storm In Summer, 2000
+							</p>
+						</section>
+				</div>
+				<div id="movie1"><img src="images/about1_movie.jpg" alt="마리아와 폰트랩"></div>
+		</div>
+		<img src="images/border1.png" alt="보더" class="bord">
+		<div id="about2">
+			<div id="movie2"><img src="images/about2_movie.jpg" alt="마리아와 폰트랩"></div>
+					<div id="actor2">
+						<section>
+						
+							<h3>등장인물</h3>
+							
+							<b>줄리 앤드류스 Julie Andrews</b><br>
+							<h5>마리아 역</h5><br>
+							<p>영국의 연극배우 데임 줄리 앤드류스는「메리포핀스(1964)」와 「사운드오브뮤직(1965)」이라는 유명한 두 초기작으로 영화계에 성큼 뛰어 들었다. <br>두 영화는 그녀를
+								아카데미상후보로 올려 놓았고 그 중 「메리포핀스」는 여우주연상을 안겨 주었으며, 그녀를 모든 시대를 통틀어 가장 사랑받는 스크린의 아이콘 중 한명으로 만들었다.
+								앤드류스는 런던 웨스트엔드의 뮤지컬 「마이페어레이디(1956)」를 비롯하여 무대와 라디오의 다양한 작품들에서 가수 겸 여배우로 활동하고 있었다. 「마이페어레이디」의
+								두 작곡가 앨런 제이러너와 프레더릭로우는 그 후 「카멜롯」을 썼으며, 앤드류스는 1960년에 브로드웨이 무대에 올린 그 작품에서 쥬느비에브역을 연기했다.<br>
+								관객석에서 「카멜롯」을 보고 있던 월트디즈니가 공연이 끝나고 무대 뒤로 찾아가 앤드류스에게 「메리포핀스」의 주연 배역을 제안한 것이다. <br><br>
+								
+								그녀는 이어서 풍자극 「에밀리 미국사람
+								만들기(1964)」와 로저스와 하트만 콤비의 「사운드오브뮤직」에 출연하게 되었다. 그러나 알프레드 히치콕의 「찢어진커튼(1966)」과 「하와이(1966)」의 드라마 연기로는
+								초기 뮤지컬 연기로 얻은 인기에는 미치지 못했다.<br> <br>앤드류스는 1969년에 작가 겸 감독인 블레이크 에드워즈와 결혼했는데, 「텐(1979)」과 「할리우드의건달들(1981)」, 「
+								빅터빅토리아(1982)」등 그의 영화 몇 편에 출연했고, 그 중 「빅터빅토리아」로는 아카데미상 후보에 또 한번 올랐다. 안타깝게도 1998년에 한 성대수술로 그녀의 음성은
+								심각하게 손상되었다. 영화 출연이 줄면서 그녀는 아동작가라는 제 2의 인생을 시작했다. 「프린세스 다이어리(2001)」와 「프린세스 다이어리2(2004)」 그리고 애니메이션
+								영화「슈렉2(2004)」의 릴리언 왕비 등 최근의 역할들도 그녀를 다시 어린이들과 가깝게 했다.
+							</p><br>
+							<h6><b>다른 작품</b></h6><br>
+							<p>메리포핀스(1964,데뷔작), 사운드 오브 뮤직(1965), 프린세스다이어리(2001), 프린세스다이어리2(2004),
+								아쿠아맨(2018), 슈퍼배드3(2017), 미스터 이빨요정(2010)</p>
+						</section>
+						
+					</div>
+			</div>	
+			<img src="images/border1.png" alt="보더" class="bord">
+			<div id="about3">
+				<div id="movie3"><img src="images/about3_movie.jpg" alt="폰트랩과 엘자"></div>
+				<div id="actor3">
+					<section>
+					
+						<h3>등장인물</h3>
+						
+						<b>크리스토퍼 플러머 Christopher Plummer</b><br>
+						<h6>캡틴 조지 본트랩 역</h6>
+						<p>1929년 12월 13일 ~ 2021년 2월 5일 / 캐나다, 토론토라스트</p>
+						<h5><b>다른 작품</b></h5>
+						<p>사운드 오브 뮤직(1965), 드라그넷(1987), 풀메저(2019), 나이브스아웃(2019), 바운더리스(2018)</p>
+					</section>
+					<section>
+					
+						<b>엘레노 파커 Eleano Parker </b><br>
+						<h6>남작부인 역</h6>
+						<p>1922년 6월 26일 ~ 2013년 12월 9일 / 미국<br>
+						</p>
+						<h5><b>다른 작품</b></h5>
+						<p>사운드 오브 뮤직(1965), 욕망의 덫(1991), 마담X(1981), 쉬즈 드레스트 투킬(1979)</p>
+					</section>
+					<section>
+						<b>리처드 헤이든 Richard Haydn</b><br>
+						<h6>맥스 역</h6>
+						<p>영 프랑켄슈타인(1974) 사운드 오브 뮤직(1965), 풍선기구의 5주(1962)</p><br>
+						<b>페기 우드 Peggy Wood</b><br>
+						<h6>마더 역</h6>
+						<p>원라이프투리브(1968),사운드오브뮤직(1965),룻이야기(1960)</p><br>
+						<b>안나 리 Anna Lee</b><br>
+						<h6>마가레타 수녀 역</h6>
+						<p>원 라이프 투 리브(1968), 사운드 오브 뮤직(1965), 룻 이야기(1960)</p><br>
+					</section>
+					
+				</div>
+				<a href="#layout" id="toTop">
+					<p>_</p>
+					<p>↑</p>
+				</a>
+			
+			</div>
+			</div>
 	</body>
 
 </html>
