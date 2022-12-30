@@ -44,23 +44,23 @@
 		html{scroll-behavior:smooth;}
 		img{max-width:100%;}
 		a{text-decoration:none; color:white;}
+		p{text-align:justify;}
 		
 		#layout	{width:1600px; height:1250px; margin:auto; position:relative; background:url("images/about-bg.jpg")no-repeat center/cover; position:relative;}
 		
 		header h1{display:none;}
-		header>div	{display:flex; padding:5px 20px; height:55px;}
-		header>div>h2	{flex:0.1; margin-right:10px;  margin-top:4px;  color:#666464;}
+		header>div	{display:flex;  padding:5px 30px; height:65px;}
+		header>div>h2	{flex:0.1; margin-right:10px;  margin-top:4px; }
+		.menu:hover {transform:scale(1.5);}
+		.menu{font-family:"Times new Roman"; color:white;  font-size:15pt; padding-left:10px; }
 		
-		.menu{font-family:"Times new Roman"; color:#ccc; font-size:15pt; padding-left:10px;}
-		.home{font-family:"Times new Roman"; color:#ccc; font-size:15pt; padding-left:10px;}
-		
-		header>div>nav{ flex:0.6;   background:rgba(255,255,255,0.3);  border-radius:35px;  margin-top:4px; display:none; padding:7px 10px; text-shadow:2px 2px 4px rgba(0,0,0,0.7); margin-left:-70px;}
+		header>div>nav{ flex:0.6;   background:rgba(255,255,255,0.9);  border-radius:35px;  margin-top:4px; display:none; padding:9px 30px; /*text-shadow:2px 2px 4px rgba(0,0,0,0.7);*/ margin-left:-70px; font-style:italic;}
 		header nav>div{display:flex; justify-content:space-around; align-items:center;}
-		header nav a{font-family:"Times new Roman"; font-size:13pt;  padding-right:10px; letter-spacing:0.05em;}
-				
+		header nav a{font-size:15pt;  padding-right:10px; letter-spacing:0.05em; font-weight:600; color:#1d2027; font-family: 'Dancing Script', cursive;}
+		header nav a:hover {transform:scale(1.3);}		
 		
-		header>div>h3{flex:1; text-align:right; margin-right:10px; margin-top:4px; color:#666464; } 
-		header>div>h3 a{font-family:"Times new Roman"; color:#666464; font-size:15pt; padding-left:10px;}
+		header>div>h3{flex:1; text-align:right; margin-right:20px; margin-top:4px;} 
+		header>div>h3 a{font-family:"Times new Roman"; color:white;   font-size:15pt; padding-left:10px;}
 		
 		header>img{display:inline-block; padding:20px 45px 0 70px; }
 		header>img:last-child {margin-left:30px;}
@@ -85,11 +85,11 @@
 		#actor h4 {font-family: 'Dancing Script', cursive; text-shadow:2px 2px 4px rgba(0,0,0,0.7); padding-left:30px;  font-size:2.8rem; }
 		
 		.showup{ position:absolute; top:0; left:0; background:rgba(0,0,0,0.85); width:100%; height:100%; display:none;} 
-		.showup>section{  background:url("images/elegance1.png")no-repeat center/cover; position:absolute; top:300px; left:380px; z-index:1; width:850px; height:650px; padding:210px 130px 150px 130px; font-family: 'Nanum Gothic', sans-serif; color:white;}
+		.showup>section{  background:url("images/elegance6.png")no-repeat center/cover; position:absolute; top:300px; left:380px; z-index:1; width:850px; height:650px; padding:210px 130px 150px 130px; font-family: 'Nanum Gothic', sans-serif; color:white;}
 		.showup>section h4{text-shadow:2px 2px 4px rgba(0,0,0,0.7);}
 		.showup>section>img {float:right; margin:0 20px; box-shadow:3px 3px 5px rgba(0,0,0,0.7); border:5px ridge #ebb444;}
-		.showup>section p{font-size:13pt; line-height:160%; color:#0e0e0e; font-weight:600; text-shadow:0px 0px 4px white;}
-		.showup>section a{font-size:20pt; font-weight:900; text-align:right; display:block; margin-top:10px; font-family: 'Dancing Script', cursive; color:#ebb444; text-shadow:0px 0px 5px rgba(0,0,0,1); margin-top:-10px;}
+		.showup>section p{font-size:13pt; line-height:160%; color:#0e0e0e; font-weight:600; /*text-shadow:0px 0px 4px white;*/}
+		.showup>section a{font-size:20pt; font-weight:900; float:right;   font-family: 'Dancing Script', cursive; color:#594244; margin-top:-10px;  margin-left:500px;}
 		
 		.right{position:absolute; right:25px; top:450px; z-index:1;}
 		
@@ -129,8 +129,8 @@
 	
 		#actor3 section h5  {font-size:13pt; margin-top:10px;  padding-bottom:10px;}
 		#actor3 section h6{font-size:13pt; padding-bottom:10px;}
-		#movie3 {padding:0px 80px 80px 80px; margin-left:150px; }
-		#movie3 img{display:block; border:6px ridge #ebb444; border-radius:50px;  box-shadow:4px 4px 6px rgba(0,0,0,0.6); width:1000px;}
+		#movie3 {padding:0px 80px 80px 80px; margin-left:0px; display:flex; }
+		#movie3 img{display:block; border:6px ridge #ebb444; border-radius:50%;  box-shadow:4px 4px 6px rgba(0,0,0,0.6); width:350px; flex:1; margin-right:130px;}
 		
 		#toTop{height:60px; width:60px; background:#3790d4; padding:0px 10px 10px 10px; border-radius:50%; position:fixed; right:55px; bottom:15px; line-height:130%;opacity:0.8;}
 		#toTop p{text-align:center; color:white; font-size:1.1rem;}
@@ -149,7 +149,7 @@
 					<h2><i  class="menu"> Menu</i></h2>
 					<nav>
 						<div>
-							<a href="menu.html" style="color:#ddd;">Menu</a>
+							<a href="menu.html">Menu</a>
 							<a href="about.html">About</a>
 							<a href="ost.html">Ost</a>
 							<a href="background.html">Background</a>
@@ -294,7 +294,7 @@
 			</div>	
 			<img src="images/border1.png" alt="보더" class="bord">
 			<div id="about3">
-				<div id="movie3"><img src="images/about3_movie.jpg" alt="폰트랩과 엘자"></div>
+				<div id="movie3"><img src="images/actor-2.jpg" alt="폰트랩"><img src="images/actor-3.jpg" alt="엘자"><img src="images/actor-4.jpg" alt="맥스"></div>
 				<div id="actor3">
 					<section>
 					
@@ -302,7 +302,9 @@
 						
 						<b>크리스토퍼 플러머 Christopher Plummer</b><br>
 						<h6>캡틴 조지 본트랩 역</h6>
-						<p>1929년 12월 13일 ~ 2021년 2월 5일 / 캐나다, 토론토라스트</p>
+						<p>1929년 12월 13일 ~ 2021년 2월 5일 / 캐나다, 토론토라스트<br>
+						캐나다의 배우 겸 성우. <br>캐나다를 대표하는 명배우로, 실제로 캐나다 국왕이 주최하는 캐나다의 날 행사에 직접 참여하기도 했고 엘리자베스 2세 캐나다 국왕에게 Companion of Canada 훈장을 수여받기도 했다. 그래서 그의 이름은 'Christopher Plummer CC'라고 칭해진다.</p><br>
+						
 						<h5><b>다른 작품</b></h5>
 						<p>사운드 오브 뮤직(1965), 드라그넷(1987), 풀메저(2019), 나이브스아웃(2019), 바운더리스(2018)</p>
 					</section>
@@ -311,6 +313,8 @@
 						<b>엘레노 파커 Eleano Parker </b><br>
 						<h6>남작부인 역</h6>
 						<p>1922년 6월 26일 ~ 2013년 12월 9일 / 미국<br>
+						고등학교 시절에 연극무대에서 이름을 날린 그녀는 졸업 후에 웨이트리스로 일하면서 영화배우가 되기 위해 여러번의 오디션을 거쳐 연극배우 생활을 거쳐 후에 워너브러더스사 관계자의 눈에 띄어 계약을 하며, 1942년 「백인 군인」이라는 영화에 단역으로 데뷔한다.<br>
+						1950년에 출연한 영화 「여감옥」에서 명연기를 보여주며 처음으로 아카데미 여우주연상 후보에 올랐고, 또 베이스국제영화제에서 여우주연상을 수상하면서 세계적인 스타로 발돋움했다.
 						</p>
 						<h5><b>다른 작품</b></h5>
 						<p>사운드 오브 뮤직(1965), 욕망의 덫(1991), 마담X(1981), 쉬즈 드레스트 투킬(1979)</p>

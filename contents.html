@@ -4,19 +4,21 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width">
 		<title>The Sound of Music</title>
+		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Nanum+Gothic:wght@400;700;800&family=Noto+Serif+KR:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<script>
 		$(document).ready(function(){
 			
 			$(".menu").on("mouseenter click", function(){
-				$(this).css("font-size","17pt");
+				$(".menu").fadeOut();
 			 $("header>div>nav").fadeIn();
 			});
 			
 			$("header>div>nav").mouseleave(function(){
-				$(".menu").css("font-size","15pt");
+				$(".menu").fadeIn();
 				$("header>div>nav").fadeOut();
 			});
+			
 			
 			
 			/*$("#youtube img").on("mouseenter click", function(){
@@ -52,33 +54,51 @@
 			 $(".utube2").stop().fadeOut();
 			});
 			
+			
+			
+			$("#pics img").click(function(){
+				const t1 = $(this).index();
+				$("#popup>div").eq(t1).fadeIn();
+			});			
+				
+			$(".showup button").click(function(){
+					$("#popup>div").fadeOut();
+				});
+				
+				
+			
 			});/////
 		</script>
 		<style>
 		* {margin:0; padding:0; box-sizing:border-box;}
-		html, body{font:16pt/120% "나눔바른고딕", sans-serif; color:white;  }
+		html, body{font:16pt/120% 'Nanum Gothic', sans-serif; color:white;  }
 		img{max-width:100%;}
 		a{text-decoration:none; color:white;}
 		
-		#layout	{width:1300px; height:790px; margin:auto; position:relative; background-image:url("images/background.jpg");}
-		header>div	{display:flex; padding-top:5px; height:40px;}
+		
+		
+		
+		
+		#layout	{width:1600px; height:1040px; margin:auto; position:relative; background:url("images/content-bg2.jpg")no-repeat center/cover;}
+		header h1{display:none;}
+		header>div	{display:flex;  padding:5px 30px; height:65px; border-radius:20px;}
 		header>div>h2	{flex:0.1; margin-right:10px;  margin-top:4px; }
 		.menu:hover {transform:scale(1.5);}
-		.menu{font-family:"Times new Roman"; color:#666464; font-size:15pt; padding-left:10px;}
+		.menu{font-family:"Times new Roman"; color:white;  font-size:15pt; padding-left:10px; }
 		
-		header>div>nav{ flex:0.6;  font-style:italic; background:rgba(255,255,255,0.3);  border-top-right-radius:15px;  margin-top:4px; display:none; padding:4px 6px;}
-		header nav>div{display:flex; justify-content:space-around;align-items:center;}
-		header nav a{font-family:"Times new Roman"; font-size:13pt;  padding-right:10px; /*border:1px solid red;*/ letter-spacing:0.05em;}
-				
+		header>div>nav{ flex:0.6;   background:rgba(255,255,255,0.9);  border-radius:35px;  margin-top:4px; display:none; padding:9px 30px; /*text-shadow:2px 2px 4px rgba(0,0,0,0.7);*/ margin-left:-70px; font-style:italic;}
+		header nav>div{display:flex; justify-content:space-around; align-items:center;}
+		header nav a{font-size:15pt;  padding-right:10px; letter-spacing:0.05em; font-weight:600; color:#1d2027; font-family: 'Dancing Script', cursive;}
+		header nav a:hover {transform:scale(1.3);}		
 		
-		header>div>h3{flex:1; text-align:right; margin-right:10px; margin-top:4px;}
-		header>div>h3 a{font-family:"Times new Roman"; color:#666464; font-size:15pt; padding-left:10px;}
+		header>div>h3{flex:1; text-align:right; margin-right:20px; margin-top:4px; text-shadow:1px 1px 2px rgba(0,0,0,0.6); } 
+		header>div>h3 a{font-family:"Times new Roman"; color:white;   font-size:15pt; padding-left:10px;}
 		header>img{display:inline-block; padding:20px 45px 0 50px; }
 		
 		main	{ padding:30px 60px;}
 		
-		#watch {display:flex; padding:0 400px 0 0px; }
-		#watch>div {background:white; flex:1; padding:5px 25px;margin-left:14px; }
+		#watch {display:flex;  }
+		#watch>div {background:white;  padding:5px 25px; margin-left:48px; width:900px; border-radius:20px;}
 		#watch>div>div{align-items:center; /*border:1px solid red;*/}
 		#watch>div>div:not(:last-child){border-bottom:1px dashed lightgray;}
 		#watch h3{flex:0.28;  }
@@ -87,18 +107,18 @@
 		#watch>div a{ background:#777; border-radius:20px; padding:6px 17px; font-size:10pt; margin-left:25px; margin-bottom:6px; }
 		
 		
-		#youtube{display:flex; margin-top:20px;/*align-items:center;*/}
-		#youtube h3 {flex:0.15;  padding-right:3px;}
-		#youtube>div{padding-left:16px;  flex:1; position:relative; }
+		#youtube{display:flex; margin-top:100px;/*align-items:center;*/}
+		#youtube h3 {flex:0.3;  padding-right:30px; text-shadow:1px 1px 2px rgba(0,0,0,0.6); }
+		#youtube>div{padding:30px;   position:relative; background:white; border-radius:20px; width:900px; }
 		#youtube iframe{margin-right:20px;}
 		
-		#utube0 img{padding-bottom:4px;}
-		#utube1 img{padding-bottom:4px;}
-		#utube2 img{padding-bottom:4px;}
+		#utube0 img{padding-bottom:4px; margin-left:30px;}
+		#utube1 img{padding-bottom:4px; margin-left:30px;}
+		#utube2 img{padding-bottom:4px; margin-left:30px;}
 		
-		#utube0 a{background:rgba(0,0,0,0.5); font-size:15pt; text-shadow:1px 1px 2px rgba(0,0,0,0.9); width:500px; height:129px; text-align:center; position:absolute; left:321px; top:2px; padding-top:50px; display:none; }
-		#utube1 a{background:rgba(0,0,0,0.5); font-size:15pt; text-shadow:1px 1px 2px rgba(0,0,0,0.9); width:500px; height:129px; text-align:center; position:absolute; left:321px; top:144px; padding-top:50px; display:none; }
-		#utube2 a{background:rgba(0,0,0,0.5); font-size:15pt; text-shadow:1px 1px 2px rgba(0,0,0,0.9); width:500px; height:130px; text-align:center; position:absolute; left:321px; top:286px; padding-top:50px; display:none; }
+		#utube0 a{background:rgba(0,0,0,0.5); font-size:15pt; text-shadow:1px 1px 2px rgba(0,0,0,0.9); width:500px; height:129px; text-align:center; position:absolute; left:351px; top:32px; padding-top:50px; display:none; }
+		#utube1 a{background:rgba(0,0,0,0.5); font-size:15pt; text-shadow:1px 1px 2px rgba(0,0,0,0.9); width:500px; height:129px; text-align:center; position:absolute; left:351px; top:174px; padding-top:50px; display:none; }
+		#utube2 a{background:rgba(0,0,0,0.5); font-size:15pt; text-shadow:1px 1px 2px rgba(0,0,0,0.9); width:500px; height:130px; text-align:center; position:absolute; left:351px; top:316px; padding-top:50px; display:none; }
 		
 		#note{position:absolute;  top:280px; left:1150px; animation:move 6s infinite linear; }
 		@keyframes move {
@@ -111,23 +131,50 @@
 		      100%{left: 1050px; top:280px;}
 			}
 		
-		.right{position:absolute; right:15px; top:46%; z-index:1;}
+		#photogallery{ width:1600px; margin:auto; background:url("images/content-bg3.png")no-repeat right bottom/contain; margin-top:10px; padding:70px 0 140px 0; }
+		#photogallery>div	{ padding:40px 60px; }
+		#gallery{background:rgba(255,255,255,0.4); padding:10px 20px;}
+		
+		#inside{display:flex; padding:8px 10px 0px 16px; }
+		#inside>h3{font-size:15pt; margin-right:20px; color:#332526; font-size:30pt; margin-left:-50px;}
+		#inside>p{ font-size:12pt; color:#666464;  letter-spacing:0.05em;  margin-right:20px; font-family: 'Dancing Script', cursive;}
+		/*#inside b{background:gray; border-radius:30px; padding:0 12px; font-size:10pt; animation:disapear 1.2s infinite; display:block;}
+		@keyframes disapear{
+		to{opacity:1;}
+		from{opacity:0.2;} }*/
+		
+		#pics{display:flex; justify-content:space-between; flex-wrap:wrap; padding:40px 0 40px 5px;}
+		#pics img{margin:10px 10px; width:200px; height:200px; border-radius:15px;}
+		#pics img:hover {filter:sepia(100%);}
+		
+		#popup{ }
+		#popup>h4 {display:none;}
+		.showup{padding:150px 240px; top:0; background:rgba(0,0,0,0.9);  position:absolute; left:0; z-index:1; width:100%; height:200%; display:none; }
+		
+		.showup>img {position:absolute; top:1100px; left:470px; border:1px solid white;  width:850px;}
+	
+		.showup button{border:none; background:none; font-size:1.5rem; top:1070px;  left:1350px;  color:white; position:absolute;}
+		
+		
+
 		</style>
 		
 		
 	</head>
 	<body>
+		
 		<div id="layout">
 			<header>
 				<div>
-					<h2><i><a href="menu.html" class="menu">Menu</a></i></h2>
+					<h2><i class="menu">Menu</i></h2>
 					<nav>
 						<div>
-						<a href="about.html">About</a>
-						<a href="ost.html">Ost</a>
-						<a href="background.html">Background</a>
-						<a href="tour.html">Tour</a>
-						<a href="contents.html">Contents</a>
+							<a href="menu.html" >Menu</a>
+							<a href="about.html">About</a>
+							<a href="ost.html">Ost</a>
+							<a href="background.html">Background</a>
+							<a href="tour.html">Tour</a>
+							<a href="contents.html">Contents</a>
 						</div>
 					</nav>
 					<h3><i><a href="index.html">Home</a></i></h3>
@@ -175,11 +222,86 @@
 				</section>
 			</main>
 			
-			<a href="contents1.html"  class="right"><img src="images/right.png" alt="오른쪽버튼" ></a>
+		
 		
 			
 		
 	
+		</div>
+		<div id="photogallery">
+			<div>
+				<section id="gallery">
+					<div id="inside">
+					<h3>영화 스틸컷 갤러리</h3><p>The Sound of Music Movie stillcut gallery </p><!-- <b>Click on the pics.↓</b> -->
+					</div>
+					<div id="pics">
+						<img src="images/gallery1_small.jpg" alt="마리아수녀 작은사진">
+						<img src="images/gallery2_small.jpg" alt="마리아기타 작은사진">
+						<img src="images/gallery3_small.jpg" alt="마리아방 작은사진">
+						<img src="images/gallery4_small.jpg" alt="아이들산책 작은사진">
+						<img src="images/gallery5_small.jpg" alt="폰트랩가족 작은사진">
+						<img src="images/gallery6_small.jpg" alt="마리아와 폰트랩 작은사진">
+						<img src="images/gallery7_small.jpg" alt="에델바이스 작은사진">
+						<img src="images/gallery8_small.jpg" alt="마리아와 폰트랩 왈츠 작은사진">
+						<img src="images/gallery9_small.jpg" alt="가족합창 작은사진">
+						<img src="images/gallery10_small.jpg" alt="마폰트랩저택 작은사진">
+						<img src="images/gallery11_small.jpg" alt="에델바이스2 작은사진">
+						<img src="images/gallery12_small.jpg" alt="마폰트랩저택 작은사진">
+					</div>
+				</section>	
+				<section id="popup">
+					<h4>큰이미지</h4>
+					<div class="showup">
+						<button type="button">X</button>				
+						<img src="images/gallery1.jpg" alt="마리아 수녀">			
+					</div>	
+					<div class="showup">
+						<button type="button">X</button>				
+						 <img src="images/gallery2.jpg" alt="마리아 기타">				
+					</div>	
+					<div class="showup">
+						<button type="button">X</button>				
+						 <img src="images/gallery3.jpg" alt="마리아방">			
+					</div>	
+					<div class="showup">
+						<button type="button">X</button>				
+						 <img src="images/gallery4.jpg" alt="아이들산책">				
+					</div>	
+					<div class="showup">
+						<button type="button">X</button>				
+						<img src="images/gallery5.jpg" alt="폰트랩가족">			
+					</div>	
+					<div class="showup">
+						<button type="button">X</button>				
+						<img src="images/gallery6.jpg" alt="마리아와 폰트랩">			
+					</div>	
+					<div class="showup">
+						<button type="button">X</button>				
+						<img src="images/gallery7.jpg" alt="에델바이스">			
+					</div>
+					<div class="showup">
+						<button type="button">X</button>				
+						<img src="images/gallery8.jpg" alt="마리아와 폰트랩 왈츠">			
+					</div>
+					<div class="showup">
+						<button type="button">X</button>				
+						<img src="images/gallery9.jpg" alt="가족합창">			
+					</div>
+					<div class="showup">
+						<button type="button">X</button>				
+						<img src="images/gallery10.jpg" alt="폰트랩저택"> 		
+					</div>
+					<div class="showup">
+						<button type="button">X</button>				
+						<img src="images/gallery11.jpg" alt="에델바이스2"> 		
+					</div>
+					<div class="showup">
+						<button type="button">X</button>				
+						<img src="images/gallery12.jpg" alt="폰트랩저택"> 		
+					</div>
+					
+				</section>
+			</div>
 		</div>
 	</body>
 
